@@ -1,0 +1,19 @@
+<ActionBar class="color" title="Formularios">
+    <ActionItem icon="res://home" class="" android.position="right" [nsRouterLink]="['/app/welcome']">
+    </ActionItem>
+</ActionBar>
+
+<GridLayout>
+    <ListView [items]="formularios" (itemTap)="onItemTap($event)" style="height:2000px">
+        <ng-template let-formulario="item">
+            <FlexboxLayout flexDirection="row">
+                <!-- <Label [text]="formulario.txFormulario" class="t-12" verticalAlignment="center" style="width: 100%">
+                    </Label> -->
+                <Label [text]="formulario.id" class="t-12" verticalAlignment="center" style="width: 100%">
+                </Label>
+                <Label [text]="formulario.orden" class="t-12" verticalAlignment="center" style="width: 100%">
+                </Label>
+            </FlexboxLayout>
+        </ng-template>
+    </ListView>
+</GridLayout>

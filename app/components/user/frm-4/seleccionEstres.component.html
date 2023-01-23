@@ -1,0 +1,258 @@
+<ActionBar class="color" title="Reconocimiento">
+	<NavigationButton icon="~/images/flechaIZ.png" android.position="left" [nsRouterLink]="['/app/welcome']">
+	</NavigationButton>
+</ActionBar>
+
+<GridLayout>
+	<ScrollView class="page">
+		<StackLayout class="fondoT">
+			<StackLayout style="border-radius: 80%;border-color: black;background-color: transparent;">
+				<GridLayout width="100%" columns="60px,*" rows="60px">
+					<StackLayout col="0" row="0"
+						style="border-width: 2;border-color: black; border-radius: 40%;margin: 25px;">
+						<Image class="m15" src="~/images/ruta.png" width="50%" stretch="aspectFit">
+						</Image>
+					</StackLayout>
+					<StackLayout col="1" row="0">
+						<Label class="foz-16" style="margin-top: 15px;" textWrap="true" [text]="ruta"></Label>
+					</StackLayout>
+				</GridLayout>
+			</StackLayout>
+			<Label class="TituMain foz-24 foz-411-18 foz-360-18" textWrap="true"
+				text="¿Que acompaña tu estrés?"></Label>
+			<Label class="foz-18 foz-411-13 foz-360-13" style="text-align: center; margin: 25px;" textWrap="true"
+				text="Seleccionar máximo 6 opciones y dales un orden de prioridad"></Label>
+
+
+			<StackLayout class="conten" style="margin-top: 25px;">
+				<Label class="TituMain foz-16 foz-411-13 foz-360-13" textWrap="true"
+					text="Prioriza tu selección"></Label>
+				<StackLayout class="mgL30">
+					<GridLayout columns="80px,180px,*" rows="*" width="100%" style="margin-top: 50px;" height="{{heightInput}}px">
+						<StackLayout col="0" row="0">
+							<StackLayout width="35%"
+								style="border-width: 1; border-color: #84C5C5; border-radius: 36%;">
+								<Label class="p" textWrap="true" text="P1"></Label>
+							</StackLayout>
+						</StackLayout>
+						<StackLayout col="1" row="0">
+							<GridLayout columns="150,*" rows="*" class="bordepunteado" (tap)="showModal()">
+								<StackLayout col="0">
+									<Label class="foz-16" textWrap="true" [text]="Elementos[0].descripcion"
+										style="text-align: left; padding: 5;padding-top: 6;"></Label>
+								</StackLayout>
+								<StackLayout col="1" *ngIf="bandera">
+									<Label textWrap="true" text="❌"
+										style="text-align: right; padding: 5;padding-top: 6;"></Label>
+								</StackLayout>
+							</GridLayout>
+						</StackLayout>
+						<StackLayout col="2" row="0">
+							<GridLayout columns="*" rows="*,*" *ngIf="bandera">
+								<StackLayout col="0" row="1" id=0 (tap)="cambiarAbajo($event)">
+									<Image src="~/images/m_abajo.png" width="150%" stretch="aspectFit">
+									</Image>
+								</StackLayout>
+							</GridLayout>
+						</StackLayout>
+					</GridLayout>
+					<Label class="line" text="       _________________________________________________"></Label>
+
+					<GridLayout columns="80px,180px,*" rows="*" width="100%" style="margin-top: 50px;" height="{{heightInput}}px">
+						<StackLayout col="0" row="0">
+							<StackLayout width="35%"
+								style="border-width: 1; border-color: #84C5C5; border-radius: 36%;">
+								<Label class="p" textWrap="true" text="P2"></Label>
+							</StackLayout>
+						</StackLayout>
+						<StackLayout col="1" row="0">
+							<GridLayout columns="150,*" rows="*" class="bordepunteado" (tap)="showModal()">
+								<StackLayout col="0">
+									<Label class="foz-16" textWrap="true" [text]="Elementos[1].descripcion"
+										style="text-align: left; padding: 5;padding-top: 6;"></Label>
+								</StackLayout>
+								<StackLayout col="1" *ngIf="bandera">
+									<Label textWrap="true" text="❌"
+										style="text-align: right; padding: 5;padding-top: 6;"></Label>
+								</StackLayout>
+							</GridLayout>
+						</StackLayout>
+						<StackLayout col="2" row="0">
+							<GridLayout columns="*" rows="*,*" *ngIf="bandera">
+								<StackLayout col="0" row="0" id="1" (tap)="cambiarArriba($event)">
+									<Image src="~/images/m_arriba.png" width="150%" stretch="aspectFit">
+									</Image>
+								</StackLayout>
+								<StackLayout col="0" row="1" id="1" (tap)="cambiarAbajo($event)">
+									<Image src="~/images/m_abajo.png" width="150%" stretch="aspectFit">
+									</Image>
+								</StackLayout>
+							</GridLayout>
+						</StackLayout>
+					</GridLayout>
+					<Label class="line" text="       _________________________________________________"></Label>
+					<GridLayout columns="80px,180px,*" rows="*" width="100%" style="margin-top: 50px;" height="{{heightInput}}px">
+						<StackLayout col="0" row="0">
+							<StackLayout width="35%"
+								style="border-width: 1; border-color: #84C5C5; border-radius: 36%;">
+								<Label class="p" textWrap="true" text="P3"></Label>
+							</StackLayout>
+						</StackLayout>
+						<StackLayout col="1" row="0">
+							<GridLayout columns="150,*" rows="*" class="bordepunteado" (tap)="showModal()">
+								<StackLayout col="0">
+									<Label class="foz-16" textWrap="true" [text]="Elementos[2].descripcion"
+										style="text-align: left; padding: 5;padding-top: 6;"></Label>
+								</StackLayout>
+								<StackLayout col="1" *ngIf="bandera">
+									<Label textWrap="true" text="❌"
+										style="text-align: right; padding: 5;padding-top: 6;"></Label>
+								</StackLayout>
+							</GridLayout>
+						</StackLayout>
+						<StackLayout col="2" row="0">
+							<GridLayout columns="*" rows="*,*" *ngIf="bandera">
+								<StackLayout col="0" row="0" id="2" (tap)="cambiarArriba($event)">
+									<Image src="~/images/m_arriba.png" width="150%" stretch="aspectFit">
+									</Image>
+								</StackLayout>
+								<StackLayout col="0" row="1" id="2" (tap)="cambiarAbajo($event)">
+									<Image src="~/images/m_abajo.png" width="150%" stretch="aspectFit">
+									</Image>
+								</StackLayout>
+							</GridLayout>
+						</StackLayout>
+					</GridLayout>
+					<Label class="line" text="       _________________________________________________"></Label>
+					<GridLayout columns="80px,180px,*" rows="*" width="100%" style="margin-top: 50px;" height="{{heightInput}}px">
+						<StackLayout col="0" row="0">
+							<StackLayout width="35%"
+								style="border-width: 1; border-color: #84C5C5; border-radius: 36%;">
+								<Label class="p" textWrap="true" text="P4"></Label>
+							</StackLayout>
+						</StackLayout>
+						<StackLayout col="1" row="0">
+							<GridLayout columns="150,*" rows="*" class="bordepunteado" (tap)="showModal()">
+								<StackLayout col="0">
+									<Label class="foz-16" textWrap="true" [text]="Elementos[3].descripcion"
+										style="text-align: left; padding: 5;padding-top: 6;"></Label>
+								</StackLayout>
+								<StackLayout col="1" *ngIf="bandera">
+									<Label textWrap="true" text="❌"
+										style="text-align: right; padding: 5;padding-top: 6;"></Label>
+								</StackLayout>
+							</GridLayout>
+						</StackLayout>
+						<StackLayout col="2" row="0">
+							<GridLayout columns="*" rows="*,*" *ngIf="bandera">
+								<StackLayout col="0" row="0" id="3" (tap)="cambiarArriba($event)">
+									<Image src="~/images/m_arriba.png" width="150%" stretch="aspectFit">
+									</Image>
+								</StackLayout>
+								<StackLayout col="0" row="1" id="3" (tap)="cambiarAbajo($event)">
+									<Image src="~/images/m_abajo.png" width="150%" stretch="aspectFit">
+									</Image>
+								</StackLayout>
+							</GridLayout>
+						</StackLayout>
+					</GridLayout>
+					<Label class="line" text="       _________________________________________________"></Label>
+					<GridLayout columns="80px,180px,*" rows="*" width="100%" style="margin-top: 50px;" height="{{heightInput}}px">
+						<StackLayout col="0" row="0">
+							<StackLayout width="35%"
+								style="border-width: 1; border-color: #84C5C5; border-radius: 36%;">
+								<Label class="p" textWrap="true" text="P5"></Label>
+							</StackLayout>
+						</StackLayout>
+						<StackLayout col="1" row="0">
+							<GridLayout columns="150,*" rows="*" class="bordepunteado" (tap)="showModal()">
+								<StackLayout col="0">
+									<Label class="foz-16" textWrap="true" [text]="Elementos[4].descripcion"
+										style="text-align: left; padding: 5;padding-top: 6;"></Label>
+								</StackLayout>
+								<StackLayout col="1" *ngIf="bandera">
+									<Label textWrap="true" text="❌"
+										style="text-align: right; padding: 5;padding-top: 6;"></Label>
+								</StackLayout>
+							</GridLayout>
+						</StackLayout>
+						<StackLayout col="2" row="0">
+							<GridLayout columns="*" rows="*,*" *ngIf="bandera">
+								<StackLayout col="0" row="0" id="4" (tap)="cambiarArriba($event)">
+									<Image src="~/images/m_arriba.png" width="150%" stretch="aspectFit">
+									</Image>
+								</StackLayout>
+								<StackLayout col="0" row="1" id="4" (tap)="cambiarAbajo($event)">
+									<Image src="~/images/m_abajo.png" width="150%" stretch="aspectFit">
+									</Image>
+								</StackLayout>
+							</GridLayout>
+						</StackLayout>
+					</GridLayout>
+					<Label class="line" text="       _________________________________________________"></Label>
+					<GridLayout columns="80px,180px,*" rows="*" width="100%" style="margin-top: 50px;" height="{{heightInput}}px">
+						<StackLayout col="0" row="0">
+							<StackLayout width="35%"
+								style="border-width: 1; border-color: #84C5C5; border-radius: 36%;">
+								<Label class="p" textWrap="true" text="P6"></Label>
+							</StackLayout>
+						</StackLayout>
+						<StackLayout col="1" row="0">
+							<GridLayout columns="150,*" rows="*" class="bordepunteado" (tap)="showModal()">
+								<StackLayout col="0">
+									<Label class="foz-16" textWrap="true" [text]="Elementos[5].descripcion"
+										style="text-align: left; padding: 5;padding-top: 6;"></Label>
+								</StackLayout>
+								<StackLayout col="1" *ngIf="bandera">
+									<Label textWrap="true" text="❌"
+										style="text-align: right; padding: 5;padding-top: 6;"></Label>
+								</StackLayout>
+							</GridLayout>
+						</StackLayout>
+						<StackLayout col="2" row="0">
+							<GridLayout columns="*" rows="*,*" *ngIf="bandera">
+								<StackLayout col="0" row="0" id="5" (tap)="cambiarArriba($event)">
+									<Image src="~/images/m_arriba.png" width="150%" stretch="aspectFit">
+									</Image>
+								</StackLayout>
+							</GridLayout>
+						</StackLayout>
+					</GridLayout>
+					<Label class="line" text="       _________________________________________________"></Label>
+				</StackLayout>
+			</StackLayout>
+			<StackLayout class="contenedorSiguiente">
+				<GridLayout columns="*,*" rows="45px" (tap)="continue()" style="vertical-align: center; text-align: center;">
+					<StackLayout col="0" row="0" style="vertical-align: center; text-align: center;">
+						<Label (tap)="continue()" class="textocontenedorSiguiente" textWrap="true"
+							text="Continuar" style="vertical-align: center; text-align: center;"></Label>
+					</StackLayout>
+					<AbsoluteLayout col="1" row="0" style="vertical-align: center; text-align: center;">
+						<Image class="imagencontenedorSiguiente" width="30%" src="~/images/flecha.png"
+							stretch="aspectFit" style="vertical-align: center; text-align: center;">
+						</Image>
+					</AbsoluteLayout>
+				</GridLayout>
+			</StackLayout>
+		</StackLayout>
+	</ScrollView>
+
+	<AbsoluteLayout style="margin-top: 97%;" width="100%" height="10%" backgroundColor="#F5F5F5">
+		<GridLayout rows="*" columns="*,auto,auto" width="100%">
+			<StackLayout row="0" col="0" style="border-color: #C5CCD4; border-width: 1">
+				<Label style=" margin-top: 15px; text-align: center;" text="4 de 9 completadas">
+				</Label>
+			</StackLayout>
+			<StackLayout row="0" col="1" style="border-color: #C5CCD4; border-width: 1;background-color: #84C5C5;"
+				(tap)="flujo('a')" class="w200 w-411-150 w-360-150">
+				<Label style="text-align: center;font-size: 25;" text="<">
+				</Label>
+			</StackLayout>
+			<StackLayout row="0" col="2" style="border-color: #C5CCD4; border-width: 1;background-color: #84C5C5;"
+				(tap)="continue()" class="w200 w-411-150 w-360-150">
+				<Label style="text-align: center;font-size: 25;" text=">">
+				</Label>
+			</StackLayout>
+		</GridLayout>
+	</AbsoluteLayout>
+</GridLayout>

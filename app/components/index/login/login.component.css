@@ -1,0 +1,103 @@
+.home-panel {
+    font-size: 20;
+    margin: 15;
+    /*padding: 15px;*/
+    background-color: white;
+}
+
+.TpLetra {
+
+}
+
+TextField {
+    placeholder-color: #969FAA;
+    border: #969FAA;
+}
+
+.page {
+    font-family: sans-serif;
+}
+
+.contojo {
+    border-width: 1;
+    border-color: #C5CCD4;
+}
+
+.tablet .btn-login {
+    align-self: center;
+    width: 400;
+}
+
+.texto2 {
+    color: #00A6FF;
+}
+
+
+.color {
+    background: #45669C;
+    color: white;
+    text-align: center;
+    border-radius: 25%;
+}
+
+.color2 {
+    background: #6b6a6a;
+    text-align: center;
+}
+
+.logoZero {
+    width: 85%;
+    height: 55%;
+    margin-top: 40%;
+}
+
+.logoCorreo {
+    padding: 0;
+    margin: 0;
+}
+
+.esp {
+    margin: 0;
+    height: auto;
+}
+
+.titulo {
+    background-color: #00A6FF;
+}
+
+
+.ContImage {
+    background-image: url("~/images/cabezeraRe.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 130;
+}
+
+
+.my-button {
+    android-elevation: 4;
+    background-color: lightseagreen;
+    border-color: darkolivegreen;
+    border-radius: 20;
+    border-width: 1;
+    color: whitesmoke;
+    font-size: 18;
+    font-weight: bold;
+}
+
+.my-button:active {
+    android-elevation: 8;
+    background-color: whitesmoke;
+    border-color: darkolivegreen;
+    border-radius: 20;
+    border-width: 1;
+    color: lightseagreen;
+    font-size: 18;
+    font-weight: bold;
+}
+
+.icon {
+    background: url(../../../images/sobre.png);
+}

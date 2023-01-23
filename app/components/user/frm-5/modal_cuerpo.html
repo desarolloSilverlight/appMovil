@@ -1,0 +1,171 @@
+<ScrollView>
+    <StackLayout style="border-radius: 10%;">
+        <Label class="foz-411-24" style="color: #24214A; text-align: center;margin-top: 35px;"
+               text="Selecciona la intensidad"></Label>
+        <Label class="h3 " style="text-align: center;margin-top: 35px;"
+               text="Rango de 0 a 10, donde 10 es muy intenso"></Label>
+        <StackLayout>
+            <StackLayout *ngIf="ElementosValue[0] != 0">
+                <GridLayout width="90%" columns="*,50px" rows="*" verticalAlignment="center">
+                    <StackLayout col="0" row="0">
+                        <Label class="h3" style="text-align: left;margin-top: 35px;margin-left: 145px;"
+                               text="Zona Cabeza"></Label>
+                    </StackLayout>
+                    <StackLayout col="1" row="0" class="number-zone">
+                        <Label class="h2" [text]="ElementosValue[0]"></Label>
+                    </StackLayout>
+                </GridLayout>
+                <GridLayout width="90%" columns="*,50px" rows="*">
+                    <StackLayout col="0" row="0">
+                        <Slider [value]="ElementosValue[0]" minValue="0" maxValue="10" backgroundColor="#84C5C5"
+                                color="black" (valueChange)="onSliderValueChange($event)" id="0">
+                        </Slider>
+
+                    </StackLayout>
+                    <StackLayout col="1" row="0" verticalAlignment="center">
+                        <StackLayout (tap)="onTap($event)" id="0">
+                            <Image src="~/images/x.png" width="50%" stretch="aspectFit">
+                            </Image>
+                        </StackLayout>
+                    </StackLayout>
+                </GridLayout>
+            </StackLayout>
+
+            <StackLayout *ngIf="ElementosValue[5] != 0">
+                <GridLayout width="90%" columns="*,50px" rows="*" verticalAlignment="center">
+                    <StackLayout col="0" row="0">
+                        <Label class="h3" style="text-align: left;margin-top: 35px;margin-left: 145px;"
+                               text="Zona abdominal"></Label>
+                    </StackLayout>
+                    <StackLayout col="1" row="0" class="number-zone">
+                        <Label class="h2" [text]="ElementosValue[5]"></Label>
+                    </StackLayout>
+                </GridLayout>
+                <GridLayout width="90%" columns="*,50px" rows="*">
+                    <StackLayout col="0" row="0">
+                        <Slider [value]="ElementosValue[5]" minValue="0" maxValue="10" backgroundColor="#84C5C5"
+                                color="black" (valueChange)="onSliderValueChange($event)" id="5">
+                        </Slider>
+                    </StackLayout>
+                    <StackLayout col="1" row="0">
+                        <StackLayout (tap)="onTap($event)" id="5" verticalAlignment="center">
+                            <Image src="~/images/x.png" width="50%" stretch="aspectFit">
+                            </Image>
+                        </StackLayout>
+                    </StackLayout>
+                </GridLayout>
+            </StackLayout>
+            <StackLayout *ngIf="ElementosValue[4] != 0">
+                <GridLayout width="90%" columns="*,50px" rows="*" verticalAlignment="center">
+                    <StackLayout col="0" row="0">
+                        <Label class="h3" style="text-align: left;margin-top: 35px;margin-left: 145px;"
+                               text="Zona Pecho"></Label>
+                    </StackLayout>
+                    <StackLayout col="1" row="0" class="number-zone">
+                        <Label class="h2" [text]="ElementosValue[4]"></Label>
+                    </StackLayout>
+                </GridLayout>
+
+                <GridLayout width="90%" columns="*,50px" rows="*" verticalAlignment="middle">
+                    <StackLayout col="0" row="0">
+                        <Slider [value]="ElementosValue[4]" minValue="0" maxValue="10" backgroundColor="#84C5C5"
+                                color="black" (valueChange)="onSliderValueChange($event)" id="4">
+                        </Slider>
+                    </StackLayout>
+                    <StackLayout col="1" row="0" verticalAlignment="center">
+                        <StackLayout (tap)="onTap($event)" id="4">
+                            <Image src="~/images/x.png" width="50%" stretch="aspectFit">
+                            </Image>
+                        </StackLayout>
+                    </StackLayout>
+                </GridLayout>
+            </StackLayout>
+            <StackLayout *ngIf="ElementosValue[2] != 0">
+                <GridLayout width="90%" columns="*,50px" rows="*" verticalAlignment="center">
+                    <StackLayout col="0" row="0">
+                        <Label class="h3" style="text-align: left;margin-top: 35px;margin-left: 145px;"
+                               text="Zona Brazos"></Label>
+                    </StackLayout>
+                    <StackLayout col="1" row="0" class="number-zone">
+                        <Label class="h2" [text]="ElementosValue[2]"></Label>
+                    </StackLayout>
+                </GridLayout>
+                <GridLayout width="90%" columns="*,50px" rows="*">
+
+                    <StackLayout col="0" row="0">
+                        <Slider [value]="ElementosValue[2]" minValue="0" maxValue="10" backgroundColor="#84C5C5"
+                                color="black" (valueChange)="onSliderValueChange($event)" id="2">
+                        </Slider>
+                    </StackLayout>
+                    <StackLayout col="1" row="0" verticalAlignment="center">
+                        <StackLayout (tap)="onTap($event)" id="2">
+                            <Image src="~/images/x.png" width="50%" stretch="aspectFit">
+                            </Image>
+                        </StackLayout>
+                    </StackLayout>
+                </GridLayout>
+            </StackLayout>
+            <StackLayout *ngIf="ElementosValue[1] != 0">
+                <GridLayout width="90%" columns="*,50px" rows="*" verticalAlignment="center">
+                    <StackLayout col="0" row="0">
+                        <Label class="h3" style="text-align: left;margin-top: 35px;margin-left: 145px;"
+                               text="Zona Pélvica"></Label>
+                    </StackLayout>
+                    <StackLayout col="1" row="0" class="number-zone">
+                        <Label class="h2" [text]="ElementosValue[1]"
+                        ></Label>
+                    </StackLayout>
+                </GridLayout>
+                <GridLayout width="90%" columns="*,50px" rows="*">
+                    <StackLayout col="0" row="0">
+                        <Slider [value]="ElementosValue[1]" minValue="0" maxValue="10" backgroundColor="#84C5C5"
+                                color="black" (valueChange)="onSliderValueChange($event)" id="1">
+                        </Slider>
+                    </StackLayout>
+                    <StackLayout col="1" row="0">
+                        <StackLayout (tap)="onTap($event)" id="1" verticalAlignment="center">
+                            <Image src="~/images/x.png" width="50%" stretch="aspectFit">
+                            </Image>
+                        </StackLayout>
+                    </StackLayout>
+                </GridLayout>
+            </StackLayout>
+            <StackLayout *ngIf="ElementosValue[3] != 0">
+                <GridLayout width="90%" columns="*,50px" rows="*" verticalAlignment="center">
+                    <StackLayout col="0" row="0">
+                        <Label class="h3" style="text-align: left;margin-top: 35px;margin-left: 145px;"
+                               text="Zona Piernas"></Label>
+                    </StackLayout>
+                    <StackLayout col="1" row="0" class="number-zone">
+                        <Label class="h2" [text]="ElementosValue[3]"></Label>
+                    </StackLayout>
+                </GridLayout>
+                <GridLayout width="90%" columns="*,50px" rows="*">
+                    <StackLayout col="0" row="0">
+                        <Slider [value]="ElementosValue[3]" minValue="0" maxValue="10" backgroundColor="#84C5C5"
+                                color="black" (valueChange)="onSliderValueChange($event)" id="3">
+                        </Slider>
+                    </StackLayout>
+                    <StackLayout col="1" row="0" verticalAlignment="center">
+                        <StackLayout (tap)="onTap($event)" id="3">
+                            <Image src="~/images/x.png" width="50%" stretch="aspectFit">
+                            </Image>
+                        </StackLayout>
+                    </StackLayout>
+                </GridLayout>
+            </StackLayout>
+        </StackLayout>
+
+
+        <StackLayout class="contenedorSiguiente" style="height: 80px;" (tap)="close()">
+            <GridLayout rows="45px" columns="*" style="vertical-align: center; text-align: center;">
+                <StackLayout col="0" row="0" style="vertical-align: center; text-align: center;"
+                             verticalAlignment="center">
+                    <Label style="align-items: center;text-align: center;vertical-align: center;" textWrap="true"
+                           text="Aplicar selección"></Label>
+                </StackLayout>
+            </GridLayout>
+
+        </StackLayout>
+    </StackLayout>
+</ScrollView>

@@ -1,0 +1,160 @@
+<ActionBar flat="true">
+    <NavigationButton class="bar" icon="~/images/flechaIZWhite.png" ios.position="left" android.position="left">
+    </NavigationButton>
+</ActionBar>
+<ScrollView class="page">
+    <StackLayout class="fondoT" iosOverflowSafeArea="false">
+        <StackLayout height="300px" width="100%" style="background-color: transparent;" class="height-ios">
+            <GridLayout rows="auto, auto" columns="100px,*">
+                <StackLayout col="0" row="0" [nsRouterLink]="['/app/welcome']">
+                    <Image style="margin-top: 25px" src="~/images/flechaIZWhite.png" width="40%"
+                           stretch="aspectFit"></Image>
+                </StackLayout>
+                <StackLayout col="1" row="0">
+                    <Label class="foz-24 title-action-bar"
+                           style="font-size:20;color: white;text-align: left;padding-top: 25px; font-weight: bold;"
+                           textWrap="true"
+                           text="Centro de Conocimiento"></Label>
+                </StackLayout>
+
+            </GridLayout>
+        </StackLayout>
+        <Label style="margin-top: 25px;font-size: 20;color: black;padding-left:25px ;padding-top: 25px; font-weight: bold;"
+               textWrap="true"
+               text="Neurociencias"></Label>
+        <ScrollView orientation="horizontal" style="margin-top: 60px;">
+            <DockLayout stretchLastChild="true">
+                <StackLayout *ngFor="let actividad of Elementos; index as i">
+                    <StackLayout class="conten contenedorContenido contenedorContenido-411 contenedorContenido-360"
+                                 dock="left" id="0" (tap)="continue(i, $event)">
+                        <GridLayout rows="auto" columns="80px,*" height="100px">
+                            <StackLayout>
+                                <StackLayout *ngIf="actividad.tipo == 'VIDEO'" col="0" row="0" style="margin-top: 20px">
+                                    <Image src="~/images/video.png" stretch="aspectFit"
+                                           class="width80 width-411-50 width-360-50">
+                                    </Image>
+                                </StackLayout>
+                                <StackLayout *ngIf="actividad.tipo == 'GRÁFICO'" col="0" row="0"
+                                             style="margin-top: 20px">
+                                    <Image src="~/images/grafico.png" stretch="aspectFit"
+                                           class="width80 width-411-50 width-360-50">
+                                    </Image>
+                                </StackLayout>
+                                <StackLayout *ngIf="actividad.tipo == 'AUDIO'" col="0" row="0" style="margin-top: 20px">
+                                    <Image src="~/images/audio.png" stretch="aspectFit"
+                                           class="width80 width-411-50 width-360-50">
+                                    </Image>
+                                </StackLayout>
+                            </StackLayout>
+                            <StackLayout col="1" row="0">
+                                <Label style="color: #646464;font-size: 20;text-align: left; font-weight: bold;"
+                                       textWrap="true"
+                                       text="{{actividad.tipo}}"></Label>
+                            </StackLayout>
+                        </GridLayout>
+                        <Label class="foz-16 foz-411-16 titulo-actividad" style=""
+                               textWrap="true" text="{{actividad.titulo}}"></Label>
+                        <Label style="margin-top:5px;color: #C5CCD4;text-align: left;margin-left: 20px;font-size: 15;"
+                               textWrap="true" text="_________________________"></Label>
+                    </StackLayout>
+                </StackLayout>
+            </DockLayout>
+        </ScrollView>
+
+        <Label style="margin-top: 25px;font-size: 20;color: black;padding-left:25px ;padding-top: 25px; font-weight: bold;"
+               textWrap="true"
+               text="Anti Estres General"></Label>
+        <ScrollView orientation="horizontal" style="margin-top: 60px;">
+            <DockLayout stretchLastChild="true">
+                <StackLayout *ngFor="let actividad of Elementos1; index as i">
+                    <StackLayout class="conten contenedorContenido contenedorContenido-411 contenedorContenido-360"
+                                 dock="left" id="1" (tap)="continue(i, $event)">
+                        <GridLayout rows="auto" columns="80px,*" height="100px">
+                            <StackLayout>
+                                <StackLayout *ngIf="actividad.tipo == 'VIDEO'" col="0" row="0" style="margin-top: 20px">
+                                    <Image src="~/images/video.png" stretch="aspectFit"
+                                           class="width80 width-411-50 width-360-50">
+                                    </Image>
+                                </StackLayout>
+                                <StackLayout *ngIf="actividad.tipo == 'GRÁFICO'" col="0" row="0"
+                                             style="margin-top: 20px">
+                                    <Image src="~/images/grafico.png" stretch="aspectFit"
+                                           class="width80 width-411-50 width-360-50">
+                                    </Image>
+                                </StackLayout>
+                                <StackLayout *ngIf="actividad.tipo == 'AUDIO'" col="0" row="0" style="margin-top: 20px">
+                                    <Image src="~/images/audio.png" stretch="aspectFit"
+                                           class="width80 width-411-50 width-360-50">
+                                    </Image>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout col="1" row="0">
+                                <Label style="color: #646464;font-size: 20;text-align: left;" textWrap="true"
+                                       text="{{actividad.tipo}}"></Label>
+                            </StackLayout>
+                        </GridLayout>
+                        <Label class="foz-16 foz-411-16" style="margin-top:15px;color: #646464;margin-left: 20px;"
+                               textWrap="true" text="{{actividad.titulo}}"></Label>
+                        <Label style="margin-top:5px;color: #C5CCD4;text-align: left;margin-left: 20px;font-size: 15;"
+                               textWrap="true" text="_________________________"></Label>
+                    </StackLayout>
+                </StackLayout>
+            </DockLayout>
+        </ScrollView>
+
+        <Label style="margin-top: 25px;font-size: 20;color: black;padding-left:25px ;padding-top: 25px;font-weight: bold;"
+               textWrap="true"
+               text="Potenciando tu Cerebro"></Label>
+        <ScrollView orientation="horizontal" style="margin-top: 50px;">
+            <DockLayout stretchLastChild="true">
+                <StackLayout *ngFor="let actividad of Elementos2; index as i">
+                    <StackLayout class="conten contenedorContenido contenedorContenido-411 contenedorContenido-360"
+                                 dock="left" id="2" (tap)="continue(i, $event)">
+                        <GridLayout rows="auto" columns="80px,*" height="100px">
+                            <StackLayout>
+                                <StackLayout *ngIf="actividad.tipo == 'VIDEO'" col="0" row="0" style="margin-top: 20px">
+                                    <Image src="~/images/video.png" stretch="aspectFit"
+                                           class="width80 width-411-50 width-360-50">
+                                    </Image>
+                                </StackLayout>
+                                <StackLayout *ngIf="actividad.tipo == 'GRÁFICO'" col="0" row="0"
+                                             style="margin-top: 20px">
+                                    <Image src="~/images/grafico.png" stretch="aspectFit"
+                                           class="width80 width-411-50 width-360-50">
+                                    </Image>
+                                </StackLayout>
+                                <StackLayout *ngIf="actividad.tipo == 'AUDIO'" col="0" row="0" style="margin-top: 20px">
+                                    <Image src="~/images/audio.png" stretch="aspectFit"
+                                           class="width80 width-411-50 width-360-50">
+                                    </Image>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout col="1" row="0">
+                                <Label style="color: #646464;font-size: 20;text-align: left;" textWrap="true"
+                                       text="{{actividad.tipo}}"></Label>
+                            </StackLayout>
+                        </GridLayout>
+                        <Label class="foz-16 foz-411-16" style="margin-top:15px;color: #646464;margin-left: 20px;"
+                               textWrap="true" text="{{actividad.titulo}}"></Label>
+                        <Label style="margin-top:5px;color: #C5CCD4;text-align: left;margin-left: 20px;font-size: 15;"
+                               textWrap="true" text="_________________________"></Label>
+                    </StackLayout>
+                </StackLayout>
+            </DockLayout>
+        </ScrollView>
+
+        <!--        <StackLayout style="margin-top: 40px; margin-bottom: 150px;">-->
+        <!--            <GridLayout rows="*" columns="*,*" width="80%">-->
+        <!--                <StackLayout row="0" col="0" [nsRouterLink]="['/app/welcome']">-->
+        <!--                    <StackLayout style="background-color: white;border-radius: 26%;border-width: 2-->
+        <!--			                    ;border-color: #646464;margin-right: 25px;" height="110px">-->
+        <!--                        <Label class="foz-18" style="color: #646464;text-align: center;margin-top: 20px;"-->
+        <!--                               textWrap="true" text="Cerrar"></Label>-->
+        <!--                    </StackLayout>-->
+        <!--                </StackLayout>-->
+        <!--            </GridLayout>-->
+        <!--        </StackLayout>-->
+    </StackLayout>
+</ScrollView>

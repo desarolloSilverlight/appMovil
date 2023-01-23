@@ -1,0 +1,147 @@
+.home-panel{
+	font-size: 20;
+	margin: 15;
+    padding: 15px;
+    background-color:white ;
+}
+
+
+TextField {
+  placeholder-color: #969FAA;
+  border: #969FAA;
+}
+
+.bar{
+    background-color: #00A6FF;
+}
+.letraR{
+    text-align: center; color: black;font-size: 15;margin: 40px; 
+}
+
+.main{
+    justify-content: center;
+}
+
+.colorButomS{
+    background: #45669C;
+    color: white;
+    text-align: center;
+    border-radius: 25%;
+    margin-top: 120px;
+}
+
+.colorButomN{
+    background: white;
+    color: black;
+    text-align: center;
+    border-radius: 20;
+    border-width: 1;
+    border-color:black;
+}
+
+
+.colorButomNSele{
+    background: white;
+    color:#00A6FF;
+    text-align: center;
+    border-color:#00A6FF;
+    border-radius: 20;
+    border-width: 1;
+}
+
+.logoZero{
+    width: 85%;
+    height: 55%;
+    margin-top: 40%;
+
+}
+
+.ContImage{
+    background-image: url("~/images/cabezeraRe.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 130;
+}
+
+.my-button {
+    android-elevation: 4;
+    border-radius: 20;
+    border-width: 1;
+    color: black;
+    font-size: 18;
+    border-color: black;
+    font-weight: bold;
+}
+
+.my-button:active {
+    background-color: whitesmoke;
+    border-color: #00A6FF;
+    border-radius: 20;
+    border-width: 2;
+    color:#00A6FF;
+    font-size: 18;
+}
+
+.titu{
+    font-size: 25;
+    text-align: center;
+    margin: 60px;
+    padding: 15%;
+}
+
+.titulo{
+    background-color: #00A6FF;
+}
+
+.tab{
+    border-radius: 25%;
+}
+
+.fas {
+    font-family: "Font Awesome 5 Free", "fa-solid-900";
+    font-weight: 900;
+}
+
+.t-18 {
+    font-size: 18;
+}
+
+.contenedor{
+    padding:15%;
+    margin: 30px;
+    font-size: 18;
+}
+
+.line{
+    color: #969FAA;
+    text-align: center;
+    margin: 80px;
+}
+
+.titu2{
+    font-size: 20;
+    text-align: left;
+    margin: 50px;
+    font-weight: bold;
+}
+
+.texto{
+    margin: 15px;
+    font-size: 15;
+}
+.span{
+    font-size: 13;
+}
+.spanl{
+    font-size: 13;
+    color: #00A6FF;
+    text-decoration: underline; 
+
+}
+
+.brn1{
+    background-color: #84C5C5;
+    color: white;
+}

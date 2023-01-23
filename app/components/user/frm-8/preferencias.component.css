@@ -1,0 +1,103 @@
+.home-panel{
+    font-size: 20;
+    margin: 15;
+}
+
+.description-label{
+    margin-bottom: 15;
+}
+
+
+.color{
+    background: transparent;
+    color:#646464 
+}
+
+.color1{
+    background: red;
+    color: white
+}
+
+
+
+.contenedor{
+    width: 50%;
+    height: 50%;
+    border-width: 1;
+    border-color: black;
+    background-color: #24214A;
+}
+.TituMain{
+    color: #45669C;
+    text-align: center;
+}
+
+.TituChil{
+    text-align: left;
+}
+.TituChil2{
+    text-align: center;
+    font-size: 15;
+    margin: 45px;
+}
+.conten{
+    margin-top: 40px;
+    margin: 10px;
+    padding: 15px;
+    border-width: 1;
+    border-color: #969FAA;
+    border-radius: 15%;
+    background-color: #F5F5F5;
+}
+
+.cont{
+    border-width: 1;
+    border-color: black;
+    border-radius: 15%;
+    margin: 15px;
+    padding: 15px;
+    background: #F5F5F5;
+}
+
+.contSelect{
+    margin-top: 40px;
+    margin: 10px;
+    padding: 15px;
+    border-width: 1;
+    border-color: #969FAA;
+    border-radius: 15%;
+    background-color: #45669C;
+    color: white;
+}
+.chec{
+    position:absolute;
+    background-color: #84C5C5;
+    border-radius: 190%;
+    color: white;
+    text-align: center;
+}
+
+
+.logo{
+    width: 45%;
+    height: 45%;
+    margin-top: 30%;
+}
+
+.contLogo{
+    position: absolute;
+    background-color: #84C5C5;
+    margin-top: 15px;
+    border-radius: 80%;
+}
+
+.subMenu{
+    position: absolute;
+    top: 100%;
+}
+.fondoT{
+    background-image: url("~/images/cabezaRecono.png") no-repeat;
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}

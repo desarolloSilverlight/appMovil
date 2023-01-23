@@ -1,0 +1,43 @@
+.checkSelect {
+    text-align: right;
+    background-color: #00A6FF;
+    border-radius: 5;
+    color: white;
+}
+
+.checkNormal {
+    border-width: 1;
+    border-color: #C5CCD4;
+    border-radius: 5;
+    background-color: white;
+}
+
+.contenedorSiguiente{
+    display: flex;
+    background: #45669C;
+    color: white;
+    width: 350px;
+    text-align: center;
+    border-radius: 25%;
+    align-items: center;
+    margin: 80px;
+}
+
+.contenedorSiguienteIn{
+    background: #969FAA;
+    color: black;
+    width: 350px;
+    text-align: center;
+    border-radius: 25%;
+    align-items: center;
+    margin: 80px;
+    vertical-align: center;
+}
+
+
+.number-zone {
+    color: white !important;
+    vertical-align: center;
+    text-align: center !important;
+    margin-top: 25px;
+}

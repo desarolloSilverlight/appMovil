@@ -1,0 +1,250 @@
+<GridLayout>
+    <StackLayout *ngIf="consultas.length === 0" height="100%"
+                 verticalAlignment="center">
+        <Label text="No tienes actividades en curso"
+               class="h2 text-center"></Label>
+    </StackLayout>
+    <ScrollView class="page">
+        <StackLayout iosOverflowSafeArea="false">
+            <StackLayout class="fondoT" width="100%" height="150px">
+                <GridLayout rows="130px" columns="auto,*,auto" verticalAlignment="center">
+                    <StackLayout col="0" row="0" class="icon-360" (tap)="MostrarMenu()" verticalAlignment="center">
+                        <Image class="width-411-60" src="~/images/menu2.png"
+                               stretch="aspectFit"></Image>
+                    </StackLayout>
+                    <StackLayout col="1" row="0">
+                        <Label class="textoActionbar foz-24 foz-360-18" textWrap="true"
+                               text="   Mi Historia" style="color: white;"></Label>
+                    </StackLayout>
+                    <StackLayout col="2" row="0" class="icon-360"
+                                 id="popup-menu-btn-3"
+                                 (tap)="showPopupMenu('popup-menu-btn-3')" verticalAlignment="center">
+                        <Image class="width-411-60" src="~/images/user.png"
+                               stretch="aspectFit">
+                        </Image>
+                    </StackLayout>
+                </GridLayout>
+            </StackLayout>
+
+
+            <StackLayout *ngFor="let item of consultas">
+                <GridLayout rows="*" columns="60px,*,100px"
+                            class="contenedorRuta h-360-300 h-400 " width="95%">
+                    <StackLayout row="0" col="0" style="margin: 15px;margin-top: 40px;">
+                        <Image src="~/images/direct.png" stretch="aspectFit">
+                        </Image>
+                    </StackLayout>
+
+                    <StackLayout row="0" col="1" style="margin: 15px;">
+                        <Label class="foz-411-13 foz-360-13 foz-24"
+                               style="margin-top:5px;color: #45669C;font-weight: bold;"
+                               textWrap="true" text="{{item.tema.grupo.ruta}}"></Label>
+                        <Label class="foz-411-13 foz-360-13 foz-18 title-activity-status"
+                               style="margin-top:5px;color: #646464;" textWrap="true"
+                               text="{{item.contestadas}} de {{item.total}} actividades completadas"></Label>
+                    </StackLayout>
+
+                    <!--                    <StackLayout row="0" col="2" style="margin: 15px;margin-top: 40px;">-->
+                    <!--                        <Image src="~/images/puntos.png" stretch="aspectFit" width="50%">-->
+                    <!--                        </Image>-->
+                    <!--                    </StackLayout>-->
+                </GridLayout>
+                <StackLayout iosOverflowSafeArea="false">
+                    <ScrollView orientation="horizontal" style="margin-top: 60px;">
+                        <DockLayout stretchLastChild="true">
+                            <StackLayout
+                                    *ngFor="let actividad of item.contenidos; index as i">
+                                <StackLayout
+                                        class="conten contenedorWelcome-411 contenedorWelcome contenedorWelcome-360"
+                                        dock="left"
+                                        (tap)="continue(actividad.id, item.flujos[i], i, item.contenidos, item.id,item.flujos)"
+                                        *ngIf="!item.flujos[i]">
+                                    <GridLayout rows="auto" columns="80px,*" height="{{height}}px">
+                                        <StackLayout *ngIf="actividad.tpContenido == 3"
+                                                     col="0" row="0"
+                                                     style="margin-top: 20px">
+                                            <Image src="~/images/audio.png"
+                                                   stretch="aspectFit"
+                                                   class="width80 width-411-50 width-360-50">
+                                            </Image>
+                                        </StackLayout>
+                                        <StackLayout *ngIf="actividad.tpContenido == 4"
+                                                     col="0" row="0"
+                                                     style="margin-top: 20px">
+                                            <Image src="~/images/grafico.png"
+                                                   stretch="aspectFit"
+                                                   class="width80 width-411-50 width-360-50">
+                                            </Image>
+                                        </StackLayout>
+                                        <StackLayout *ngIf="actividad.tpContenido == 5"
+                                                     col="0" row="0"
+                                                     style="margin-top: 20px">
+                                            <Image src="~/images/actividad.png"
+                                                   stretch="aspectFit"
+                                                   class="width80 width-411-50 width-360-50">
+                                            </Image>
+                                        </StackLayout>
+                                        <StackLayout *ngIf="actividad.tpContenido == 3"
+                                                     col="1" row="0">
+                                            <Label class="foz-411-16 foz-24 foz-360-13"
+                                                   style="color: #646464;text-align: left;margin-top: 20px;"
+                                                   textWrap="true" text="  AUDIO"></Label>
+                                        </StackLayout>
+                                        <StackLayout *ngIf="actividad.tpContenido == 4"
+                                                     col="1" row="0">
+                                            <Label class="foz-411-16 foz-24 foz-360-13"
+                                                   style="color: #646464;text-align: left;margin-top: 20px;"
+                                                   textWrap="true" text="  GRAFICO"></Label>
+                                        </StackLayout>
+                                        <StackLayout *ngIf="actividad.tpContenido == 5"
+                                                     col="1" row="0">
+                                            <Label class="foz-411-16 foz-24 foz-360-13"
+                                                   style="color: #646464;text-align: left;margin-top: 20px;"
+                                                   textWrap="true"
+                                                   text="  ACTIVIDAD"></Label>
+                                        </StackLayout>
+                                    </GridLayout>
+                                    <Label class="foz-411-13 foz-360-13 foz-18"
+                                           style="margin-top:15px;color: #646464;margin-left: 20px;"
+                                           textWrap="true"
+                                           text="{{actividad.titulo}}"></Label>
+                                    <Label class="foz-411-13 foz-360-13 foz-18"
+                                           style="margin-top:5px;color: #C5CCD4;text-align: left;margin-left: 20px;"
+                                           textWrap="true"
+                                           text="_________________________"></Label>
+                                    <GridLayout rows="auto,*" columns="120px,*"
+                                                height="150px">
+                                        <StackLayout col="0" row="0">
+                                            <Label class="foz-411-13 foz-360-13 foz-18"
+                                                   style="margin-top:5px;color: #646464;text-align: left;font-weight: bold;margin-left: 20px;"
+                                                   textWrap="true"
+                                                   text="Actividad pendiente"></Label>
+                                        </StackLayout>
+                                    </GridLayout>
+                                </StackLayout>
+
+                                <StackLayout
+                                        class="contenSelect contenedorWelcome-411 contenedorWelcome contenedorWelcome-360"
+                                        dock="left"
+                                        (tap)="continue(actividad.id, item.flujos[i], i, item.contenidos, item.id, item.flujos)"
+                                        *ngIf="item.flujos[i]">
+                                    <GridLayout rows="auto" columns="80px,*" height="80px">
+                                        <StackLayout *ngIf="actividad.tpContenido == 3"
+                                                     col="0" row="0">
+                                            <Image src="~/images/audio.png"
+                                                   stretch="aspectFit"
+                                                   class="width80 width-411-50 width-360-50">
+                                            </Image>
+                                        </StackLayout>
+                                        <StackLayout *ngIf="actividad.tpContenido == 4"
+                                                     col=" 0" row="0">
+                                            <Image src="~/images/grafico.png"
+                                                   stretch="aspectFit"
+                                                   class="width80 width-411-50 width-360-50">
+                                            </Image>
+                                        </StackLayout>
+                                        <StackLayout *ngIf="actividad.tpContenido == 5"
+                                                     col=" 0" row="0">
+                                            <Image src="~/images/actividad.png"
+                                                   stretch="aspectFit"
+                                                   class="width80 width-411-50 width-360-50">
+                                            </Image>
+                                        </StackLayout>
+
+                                        <StackLayout *ngIf="actividad.tpContenido == 3"
+                                                     col="1" row="0">
+                                            <Label class="foz-411-13 foz-360-13 foz-24"
+                                                   style="color: #646464;text-align: left;margin-top: 20px;"
+                                                   textWrap="true" text="  AUDIO"></Label>
+                                        </StackLayout>
+                                        <StackLayout *ngIf="actividad.tpContenido == 4"
+                                                     col="1" row="0">
+                                            <Label class="foz-411-13 foz-360-13 foz-24"
+                                                   style="color: #646464;text-align: left;margin-top: 20px;"
+                                                   textWrap="true" text="  GRAFICO"></Label>
+                                        </StackLayout>
+                                        <StackLayout *ngIf="actividad.tpContenido == 5"
+                                                     col="1" row="0">
+                                            <Label class="foz-411-13 foz-360-13 foz-24"
+                                                   style="color: #646464;text-align: left;margin-top: 20px;"
+                                                   textWrap="true"
+                                                   text="  ACTIVIDAD"></Label>
+                                        </StackLayout>
+                                    </GridLayout>
+                                    <Label class="foz-411-13 foz-360-13 foz-18"
+                                           style="margin-top:10px;color: #646464;margin-left: 20px;"
+                                           textWrap="true"
+                                           text="{{actividad.titulo}}"></Label>
+                                    <Label class="foz-411-13 foz-360-13 foz-18"
+                                           style="margin-top:5px;color: #C5CCD4;text-align: left;margin-left: 15px;"
+                                           textWrap="true"
+                                           text="_________________________"></Label>
+                                    <GridLayout rows="auto,*" columns="120px,*"
+                                                height="{{heightBox}}px">
+                                        <StackLayout col="0" row="0">
+                                            <Label class="foz-411-13 foz-360-13 foz-18"
+                                                   style="margin-top:5px;color: #646464;text-align: left;font-weight: bold;margin-left: 20px;"
+                                                   textWrap="true"
+                                                   text="Actividad finalizada"></Label>
+                                            <Label class="foz-411-13 foz-360-13 foz-18"
+                                                   style="color: #646464;text-align: left;margin-left: 20px;"
+                                                   textWrap="true"
+                                                   text="{{item.fecha | date : 'dd/MM/yyyy'}}"></Label>
+                                        </StackLayout>
+                                        <StackLayout col="1" row="0" rowSpan="2">
+                                            <StackLayout style="margin-top: 20px;">
+                                                <Image
+                                                        *ngIf="item.flujos[i].calificacion == 1"
+                                                        src="~/images/enojado.png"
+                                                        stretch="aspectFit" width="40%"
+                                                        style="border-color: black;border-width: 1;border-radius: 80%;">
+                                                </Image>
+                                                <Image
+                                                        *ngIf="item.flujos[i].calificacion == 2"
+                                                        src="~/images/llorando.png"
+                                                        stretch="aspectFit" width="40%"
+                                                        style="border-color: black;border-width: 1;border-radius: 80%;">
+                                                </Image>
+                                                <Image
+                                                        *ngIf="item.flujos[i].calificacion == 3"
+                                                        src="~/images/contento.png"
+                                                        stretch="aspectFit" width="40%"
+                                                        style="border-color: black;border-width: 1;border-radius: 80%;">
+                                                </Image>
+                                                <Image
+                                                        *ngIf="item.flujos[i].calificacion == 4"
+                                                        src="~/images/enamorado.png"
+                                                        stretch="aspectFit" width="40%"
+                                                        style="border-color: black;border-width: 1;border-radius: 80%;">
+                                                </Image>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </GridLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </DockLayout>
+                    </ScrollView>
+                </StackLayout>
+                <!--                <StackLayout style="margin-top: 20px;">-->
+                <!--                    <GridLayout rows="*" columns="*,*" width="95%" height="440px">-->
+                <!--                        <StackLayout row="0" col="0"-->
+                <!--                                     style="background-color: #F5F5F5;border-radius: 26%;margin-right:35px;">-->
+                <!--                            <StackLayout width="150px" height="150px"-->
+                <!--                                         style="align-items: center;background-color: #F5F5F5;border-radius: 55%;margin-top: 75px;border-color: #646464;border-width: 2;">-->
+                <!--                                <Image src="~/images/chat.png" stretch="aspectFit"-->
+                <!--                                       width="60%" style="margin-top: 20px">-->
+                <!--                                </Image>-->
+                <!--                            </StackLayout>-->
+                <!--                            <StackLayout width="100%">-->
+                <!--                                <Label class="foz-411-13 foz-360-13 foz-18"-->
+                <!--                                       style="border-left: 10px; color: #646464;text-align: center;"-->
+                <!--                                       textWrap="true"-->
+                <!--                                       text="Comentarios de mi neurofacilitador"></Label>-->
+                <!--                            </StackLayout>-->
+                <!--                        </StackLayout>-->
+                <!--                    </GridLayout>-->
+                <!--                </StackLayout>-->
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</GridLayout>

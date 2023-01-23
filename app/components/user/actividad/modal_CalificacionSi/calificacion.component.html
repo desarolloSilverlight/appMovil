@@ -1,0 +1,111 @@
+<ScrollView height="100%">
+    <StackLayout class="fondoT">
+        <StackLayout height="200px" width="100%" style="background-color: transparent;">
+            <GridLayout rows="auto, auto" columns="100px,*">
+                <StackLayout col="0" row="0" [nsRouterLink]="['/app/actividades']">
+                    <Image style="margin-top: 25px" src="~/images/flechaIZ.png" width="40%" stretch="aspectFit"></Image>
+                </StackLayout>
+                <StackLayout col="1" row="0">
+                    <Label style="color: #646464;text-align: left;font-size: 15;padding: 40px;" textWrap="true"
+                           text="Califica el alivio de tus síntomas"></Label>
+                </StackLayout>
+
+            </GridLayout>
+        </StackLayout>
+
+        <Label class="foz-18" style="margin-top:30px;color: #646464;font-weight: bold;text-align: center;"
+               textWrap="true"
+               text="Después de realizar todas tus actividades, ¿cómo te sientes en cada zona del cuerpo que seleccionaste previamente?">
+        </Label>
+
+
+        <StackLayout *ngFor="let parte of partes; index as i">
+            <StackLayout style="margin-left: 60px;margin-top:100px;margin-right: 60px;">
+                <GridLayout rows="*" columns="30px,100px">
+                    <StackLayout col="0" row="0">
+                        <StackLayout style="border-radius: 35%;border-color: #84C5C5;border-width: 1;">
+                            <Label style="color: #24214A;text-align: center;" textWrap="true" text="P{{i + 1}}"></Label>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout col="1" row="0" style="margin-left: 15px;">
+                        <Label class="foz-18" style="color: #24214A;text-align: center;font-size: 14;font-weight: bold;"
+                               textWrap="true" text="{{parte.descripcion.trim()}}"></Label>
+                    </StackLayout>
+                </GridLayout>
+                <GridLayout rows="*" columns="*,*,*,*" style="border-top: 30PX;">
+                    <StackLayout col="0" row="0" class="items" (tap)="onTap($event , i)" id="4">
+                        <Image style="margin: 30px;" src="~/images/llorando.png" width="30%" stretch="aspectFit">
+                        </Image>
+                        <Label class="foz-18" style="color: #646464;text-align: center;" textWrap="true"
+                               text="Sin cambio"></Label>
+                    </StackLayout>
+
+
+                    <StackLayout col="1" row="0" class="items" (tap)="onTap($event , i)" id="3">
+                        <Image style="margin: 30px;" src="~/images/enojado.png" width="30%" stretch="aspectFit"></Image>
+                        <Label class="foz-18" style="color: #646464;text-align: center;" textWrap="true"
+                               text="Algo de mejoría"></Label>
+                    </StackLayout>
+
+
+                    <StackLayout col="2" row="0" class="items" (tap)="onTap($event , i)" id="2">
+                        <Image style="margin: 30px;" src="~/images/contento.png" width="30%" stretch="aspectFit">
+                        </Image>
+                        <Label class="foz-18" style="color: #646464;text-align: center;" textWrap="true"
+                               text="Mucho mejor"></Label>
+                    </StackLayout>
+
+                    <StackLayout col="3" row="0" class="items" (tap)="onTap($event , i)" id="1">
+                        <Image style="margin: 30px;" src="~/images/enamorado.png" width="30%" stretch="aspectFit">
+                        </Image>
+                        <Label class="foz-18" style="color: #646464;text-align: center;" textWrap="true"
+                               text="Aliviado"></Label>
+                    </StackLayout>
+
+                    <StackLayout *ngIf="cantidadP[i] == 4" col="0" row="0" class="itemSelect" (tap)="onTap($event , i)"
+                                 id="4">
+                        <Image style="margin: 30px;" src="~/images/llorando.png" width="30%" stretch="aspectFit">
+                        </Image>
+                        <Label class="foz-18" style="color: #646464;text-align: center;" textWrap="true"
+                               text="Sin cambio"></Label>
+                    </StackLayout>
+                    <StackLayout *ngIf="cantidadP[i] == 3" col="1" row="0" class="itemSelect" (tap)="onTap($event , i)"
+                                 id="3">
+                        <Image style="margin: 30px;" src="~/images/enojado.png" width="30%" stretch="aspectFit"></Image>
+                        <Label class="foz-18" style="color: #646464;text-align: center;" textWrap="true"
+                               text="Algo de mejoría"></Label>
+                    </StackLayout>
+                    <StackLayout *ngIf="cantidadP[i] == 2" col="2" row="0" class="itemSelect" (tap)="onTap($event , i)"
+                                 id="2">
+                        <Image style="margin: 30px;" src="~/images/contento.png" width="30%" stretch="aspectFit">
+                        </Image>
+                        <Label class="foz-18" style="color: #646464;text-align: center;" textWrap="true"
+                               text="Mucho mejor"></Label>
+                    </StackLayout>
+                    <StackLayout *ngIf="cantidadP[i] == 1" col="3" row="0" class="itemSelect" (tap)="onTap($event , i)"
+                                 id="1">
+                        <Image style="margin: 30px;" src="~/images/enamorado.png" width="30%" stretch="aspectFit">
+                        </Image>
+                        <Label class="foz-18" style="color: #646464;text-align: center;" textWrap="true"
+                               text="Aliviado"></Label>
+                    </StackLayout>
+                </GridLayout>
+                <Label style="color: #C5CCD4;text-align: center;font-size: 12;" textWrap="true"
+                       text="___________________________________________"></Label>
+            </StackLayout>
+        </StackLayout>
+
+        <StackLayout style="margin-top: 40px;">
+            <GridLayout rows="90px" columns="*" width="80%">
+
+                <StackLayout row="0" col="1" (tap)="next()">
+                    <StackLayout style="background-color: #45669C;border-radius: 26%;border-width: 1
+                    ;border-color: #646464;margin-left: 25px;" height="110px">
+                        <Label style="color: #FFFFFF;text-align: center;font-weight: bold;margin-top: 20px;"
+                               textWrap="true" text="Enviar"></Label>
+                    </StackLayout>
+                </StackLayout>
+            </GridLayout>
+        </StackLayout>
+    </StackLayout>
+</ScrollView>

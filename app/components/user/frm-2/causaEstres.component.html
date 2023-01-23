@@ -1,0 +1,132 @@
+<ActionBar class="color" title="Reconocimiento">
+    <NavigationButton icon="~/images/flechaIZ.png" android.position="left" [nsRouterLink]="['/app/welcome']">
+    </NavigationButton>
+</ActionBar>
+
+<GridLayout>
+    <ScrollView class="page">
+        <StackLayout class="fondoT">
+            <StackLayout style="border-radius: 80%;border-color: black;background-color: transparent;">
+                <GridLayout width="100%" columns="60px,*" rows="60px">
+                    <StackLayout col="0" row="0"
+                                 style="border-width: 2;border-color: black; border-radius: 40%;margin: 25px;">
+                        <Image class="m15" src="~/images/ruta.png" width="50%" stretch="aspectFit">
+                        </Image>
+                    </StackLayout>
+                    <StackLayout col="1" row="0">
+                        <Label class="foz-16" style="margin-top: 15px;" textWrap="true" [text]="ruta"></Label>
+                    </StackLayout>
+                </GridLayout>
+            </StackLayout>
+            <Label class="TituMain foz-24 foz-411-16 foz-360-16" textWrap="true"
+                   text="Ahora, selecciona la opción que más te genera estrés"></Label>
+
+            <StackLayout class="width60 width-411-80 width-360-85">
+                <StackLayout *ngIf="banderaSelect">
+                    <StackLayout *ngFor="let item of Elementos">
+                        <StackLayout height="{{height}}px">
+                            <StackLayout *ngIf="idSelect == item.id">
+                                <GridLayout (tap)="onTap2($event)" id="{{item.id}}" columns="100px,* 40px" rows="65px"
+                                            class="contSelect">
+                                    <StackLayout col="0" row="0"
+                                                 class="contLogo contLogo2  width10 width-411-18 width-360-18">
+                                        <Image class="width-411-60" [src]="img(item)" stretch="aspectFit"
+                                               style="margin-top: 20px;">
+                                        </Image>
+                                    </StackLayout>
+                                    <StackLayout col="1" row="0">
+                                        <Label class="TituChil mgT15 foz-411-13" textWrap="true" id="{{item.id}}"
+                                               text="{{item.descripcion2}}"></Label>
+                                    </StackLayout>
+                                    <AbsoluteLayout col="2" row="0" *ngIf="idSelect == item.id">
+                                        <StackLayout class="width60 width-411-60 width-360-60">
+                                            <Label class="chec h3" text="✔"></Label>
+                                        </StackLayout>
+                                    </AbsoluteLayout>
+                                </GridLayout>
+                            </StackLayout>
+                            <StackLayout *ngIf="idSelect != item.id">
+                                <GridLayout (tap)="onTap2($event)" id="{{item.id}}" columns="100px,* 40px" rows="65px"
+                                            class="conten">
+                                    <StackLayout col="0" row="0"
+                                                 class="contLogo contLogo2  width10 width-411-18 width-360-18">
+                                        <Image class="width-411-60" [src]="img(item)" stretch="aspectFit"
+                                               style="margin-top: 20px;">
+                                        </Image>
+                                    </StackLayout>
+
+                                    <StackLayout col="1" row="0">
+                                        <Label class="TituChil mgT15 foz-411-13" textWrap="true" id="{{item.id}}"
+                                               text="{{item.descripcion2}}"></Label>
+                                    </StackLayout>
+                                    <AbsoluteLayout col="2" row="0" *ngIf="idSelect == item.id">
+                                        <StackLayout class="width60 width-411-60 width-360-60">
+                                            <Label class="chec h3" text="✔"></Label>
+                                        </StackLayout>
+                                    </AbsoluteLayout>
+                                </GridLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout *ngIf="banderaSelect == false">
+                    <StackLayout *ngFor="let item of Elementos">
+                        <StackLayout height="{{height}}px">
+                            <GridLayout (tap)="onTap($event)" id="{{item.id}}" columns="100px,* 40px" rows="65px"
+                                        class="conten">
+                                <StackLayout col="0" row="0"
+                                             class="contLogo contLogo2  width10 width-411-18 width-360-18">
+                                    <Image class="width-411-60" [src]="img(item)" stretch="aspectFit"
+                                           style="margin-top: 20px;">
+                                    </Image>
+                                </StackLayout>
+                                <StackLayout col="1" row="0">
+                                    <Label class="TituChil mgT15 foz-411-13" textWrap="true" id="{{item.id}}"
+                                           text="{{item.descripcion2}}"></Label>
+                                </StackLayout>
+                                <AbsoluteLayout col="2" row="0" *ngIf="idSelect == item.id">
+                                    <StackLayout class="width60 width-411-60 width-360-60">
+                                        <Label class="chec h3" width="80px" text="✔"></Label>
+                                    </StackLayout>
+                                </AbsoluteLayout>
+                            </GridLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout class="contenedorSiguiente">
+                <GridLayout columns="*,*" rows="45px" (tap)="continue()"
+                            style="vertical-align: center; text-align: center;">
+                    <StackLayout col="0" row="0" style="vertical-align: center; text-align: center;">
+                        <Label (tap)="continue()" class="textocontenedorSiguiente" textWrap="true"
+                               text="Continuar" style="vertical-align: center; text-align: center;"></Label>
+                    </StackLayout>
+                    <AbsoluteLayout col="1" row="0" style="vertical-align: center; text-align: center;">
+                        <Image class="imagencontenedorSiguiente" width="30%" src="~/images/flecha.png"
+                               stretch="aspectFit" style="vertical-align: center; text-align: center;">
+                        </Image>
+                    </AbsoluteLayout>
+                </GridLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+    <AbsoluteLayout style="margin-top: 97%;" width="100%" height="10%" backgroundColor="#F5F5F5">
+        <GridLayout rows="*" columns="*,auto,auto" width="100%">
+            <StackLayout row="0" col="0" style="border-color: #C5CCD4; border-width: 1">
+                <Label style=" margin-top: 15px; text-align: center;" text="2 de 9 completadas">
+                </Label>
+            </StackLayout>
+            <StackLayout row="0" col="1" style="border-color: #C5CCD4; border-width: 1;background-color: #84C5C5;"
+                         (tap)="flujo('a')" class="w200 w-411-150 w-360-150">
+                <Label style="text-align: center;font-size: 25;" text="<">
+                </Label>
+            </StackLayout>
+            <StackLayout row="0" col="2" style="border-color: #C5CCD4; border-width: 1;background-color: #84C5C5;"
+                         (tap)="continue()" class="w200 w-411-150 w-360-150">
+                <Label style="text-align: center;font-size: 25;" text=">">
+                </Label>
+            </StackLayout>
+        </GridLayout>
+    </AbsoluteLayout>
+</GridLayout>

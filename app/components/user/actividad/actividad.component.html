@@ -1,0 +1,54 @@
+<ActionBar background="white" title="{{contenido?.titulo}}" color.ios="white"></ActionBar>
+<ScrollView>
+    <ScrollView>
+        <StackLayout>
+            <StackLayout height="15%" width="100%" style="background-color: transparent;">
+                <GridLayout rows="auto, auto" columns="100px,*">
+                    <StackLayout col="0" row="0" (tap)="goActividades()">
+                        <Image style="margin-top: 25px" src="~/images/flechaIZ.png" width="40%"
+                               stretch="aspectFit"></Image>
+                    </StackLayout>
+                    <StackLayout col="1" row="0">
+                        <Label class="foz-24 title-activity"
+                               style="color: #646464;text-align: left;padding-top: 25px;padding-left: 25;font-weight: bold;"
+                               textWrap="true"
+                               text="{{contenido?.titulo}}"></Label>
+                    </StackLayout>
+
+                </GridLayout>
+            </StackLayout>
+
+            <StackLayout *ngIf="Tpimagen">
+                <Image width="100%" [src]="foto" pinchToZoom stretch="aspectFit"></Image>
+            </StackLayout>
+
+
+            <StackLayout *ngIf="ready">
+                <GridLayout rows="*" columns="*" (tap)="togglePlay()">
+                    <Image src="~/images/audioActividad.png" width="100%" stretch="aspectFit">
+                    </Image>
+                    <Image *ngIf="!_audioService.isAudioPlaying()" src="~/images/video.png" width="30%"
+                           stretch="aspectFit"></Image>
+                </GridLayout>
+            </StackLayout>
+            <StackLayout *ngIf="!ready">
+                <ActivityIndicator [busy]="isBusy"></ActivityIndicator>
+            </StackLayout>
+            <StackLayout *ngIf="ready">
+                <AudioPlayer></AudioPlayer>
+            </StackLayout>
+            <StackLayout style="margin-top: 40px;" *ngIf="ready || Tpimagen">
+                <GridLayout rows="auto" columns="*" width="70%">
+                    <StackLayout row="0" col="0" (tap)="showModal()">
+                        <StackLayout style="background-color: #45669C;border-radius: 26%;border-width: 1
+	                    ;border-color: #646464;margin-left: 25px;" height="80px">
+                            <Label class="foz-18 h3"
+                                   style="color: #FFFFFF;text-align: center;font-weight: bold;margin-top: 20px;"
+                                   textWrap="true" text="Finalizar ejercicio"></Label>
+                        </StackLayout>
+                    </StackLayout>
+                </GridLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ScrollView>

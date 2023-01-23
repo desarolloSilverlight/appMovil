@@ -1,0 +1,139 @@
+<ActionBar background="white" title="My App" color.ios="white"></ActionBar>
+<ScrollView>
+    <StackLayout class="main">
+        <StackLayout class="ContImage">
+            <Image class="logoZero" src="~/images/logozero.png" stretch="aspectFit"></Image>
+        </StackLayout>
+        <StackLayout>
+            <Label class="titu" text="Registrarme como:"></Label>
+        </StackLayout>
+
+        <ScrollView orientation="horizontal" style="margin-top: 30px;">
+            <DockLayout stretchLastChild="true" *ngFor="let a of tpRegistroA; index as i">
+                <Button *ngIf="i == 0" width="10%" class="cnSelect" text="{{a.descripcion}}" id="{{a.id}}"
+                        (tap)="cambio($event)"></Button>
+<!--                <Button *ngIf="i == 0 && tpRegistroA[0].id != tpRegistro" width="300px" class="cnNormal"-->
+<!--                        text="{{a.descripcion}}" id="{{a.id}}" (tap)="cambio($event)"></Button>-->
+                <Button *ngIf="i != 0" width="300px" class="cnNormal" text="{{a.descripcion}}" id="{{a.id}}"
+                        (tap)="cambio($event)"></Button>
+            </DockLayout>
+        </ScrollView>
+
+        <StackLayout class="contendor80 conte80">
+            <StackLayout *ngIf="tpRegistro != 1 && tpRegistro != null">
+                <Label text=" Nombres" class="fz-18 foz-411-13"></Label>
+                <TextField [(ngModel)]="nombre" class="texto -primary -rounded-sm">
+                </TextField>
+                <Label text=" Apellidos" class="fz-18 foz-411-13"></Label>
+                <TextField [(ngModel)]="apellidos" class="texto -primary -rounded-sm">
+                </TextField>
+            </StackLayout>
+            <StackLayout *ngIf="tpRegistro == 1">
+                <Label text=" Nit" class="fz-18 foz-411-13"></Label>
+                <TextField [(ngModel)]="nit" class="texto -primary -rounded-sm">
+                </TextField>
+                <Label text=" Razon Social" class="fz-18 foz-411-13"></Label>
+                <TextField [(ngModel)]="razonSocial" class="texto -primary -rounded-sm">
+                </TextField>
+                <Label text=" Datos de quien hace el registro" class="fz-13"></Label>
+
+                <Label text=" Nombre de Contacto" class="fz-18 foz-411-13"></Label>
+                <TextField [(ngModel)]="nombreContacto" class="texto -primary -rounded-sm">
+                </TextField>
+                <Label text=" Telefono de Contacto" class="fz-18 foz-411-13"></Label>
+                <TextField [(ngModel)]="telefonoContacto" class="texto -primary -rounded-sm">
+                </TextField>
+            </StackLayout>
+
+            <Label text=" Correo electrónico" class="fz-18 foz-411-13"></Label>
+            <TextField [(ngModel)]="email" class="texto -primary -rounded-sm">
+            </TextField>
+
+            <StackLayout *ngIf="tpRegistro != 1 && tpRegistro != null">
+                <Label text=" Código de invitación *" class="fz-18 foz-411-13"></Label>
+                <GridLayout columns="auto, *, auto" row="auto, *, auto">
+                    <TextField [(ngModel)]="codigoInvitacion" width="70%" col="0" row="0"
+                               class="texto -primary -rounded-sm">
+                    </TextField>
+                    <Button class="btn-code" (tap)="vCodigoInv()" *ngIf="codigo" width="20%"
+                            style="background-color: #84C5C5;color: white;border-width: 1;border-color: black;" col="1"
+                            row="0" text="✓"></Button>
+                    <Button class="btn-code" (tap)="vCodigoInv()" *ngIf="!codigo" width="20%"
+                            style="color: red;border-width: 1;border-color: black;" col="1" row="0" text=""></Button>
+                </GridLayout>
+            </StackLayout>
+
+            <!--            <Label text=" Dirección" class="fz-18 foz-411-13"></Label>-->
+            <!--            <TextField [(ngModel)]="direccion" class="texto -primary -rounded-sm">-->
+            <!--            </TextField>-->
+            <Label text=" Contraseña" class="fz-18 foz-411-13"></Label>
+            <GridLayout columns="*, 40px">
+                <StackLayout col="0" class="mt-pass">
+                    <TextField *ngIf="ver" [(ngModel)]="password" class="texto -primary -rounded-sm esp"
+                               hint="🔒 Contraseña">
+                    </TextField>
+                    <TextField *ngIf="!ver" [(ngModel)]="password" class="texto -primary -rounded-sm esp" secure="true"
+                               hint="🔒 Contraseña">
+                    </TextField>
+                </StackLayout>
+                <StackLayout col="1" class="contojo controlojo-411 controlojo-360-L" (tap)="mostrarP()">
+                    <Image src="~/images/ojo.png" stretch="aspectFit">
+                    </Image>
+                </StackLayout>
+            </GridLayout>
+            <Label text=" Repetir Contraseña" class="fz-18 foz-411-13"></Label>
+            <GridLayout columns="*, 40px">
+                <StackLayout col="0" class="mt-pass">
+                    <TextField *ngIf="ver" [(ngModel)]="passwordR" class="texto -primary -rounded-sm esp"
+                               hint="🔒 Contraseña">
+                    </TextField>
+                    <TextField *ngIf="!ver" [(ngModel)]="passwordR" class="texto -primary -rounded-sm esp" secure="true"
+                               hint="🔒 Contraseña">
+                    </TextField>
+                </StackLayout>
+                <StackLayout col="1" class="controlojo-411 controlojo-360-L contojo " (tap)="mostrarP()">
+                    <Image src="~/images/ojo.png" stretch="aspectFit">
+                    </Image>
+                </StackLayout>
+            </GridLayout>
+            <Label *ngIf="passwordR != password" text="Por favor verifique que sean iguales las contraseñas"
+                   style="font-size: 12;color: red;"></Label>
+            <GridLayout rows="*" columns="auto,*">
+                <StackLayout row="0" col="0" class="cntterminos" (tap)="termi()">
+                    <Label *ngIf="terminos" style="text-align: center;" class="foz-411-13" text="✓"></Label>
+                    <Label *ngIf="!terminos" text=""></Label>
+                </StackLayout>
+                <StackLayout row="0" col="1">
+                    <FlexboxLayout flexWrap="wrap">
+                        <Label class="span foz-411-13 foz-411-13" style="margin-left: 15px;"
+                               text="Al registrarte, aceptas nuestras "
+                        ></Label>
+                        <Label class="span foz-411-13 foz-411-13" text="comunicaciones y "
+                               style="margin-left: 15px;"></Label>
+                        <Label (tap)="routin2()" class="spanl foz-16 foz-411-13"
+                               text="términos de uso">
+                        </Label>
+                        <!--                        <Label text=" ¿Ya tienes una cuenta?. "></Label>-->
+                        <!--                        <Label (tap)="routin()" class="spanl foz-16 foz-411-13" text="Ingresa aquí">-->
+                        <!--                        </Label>-->
+                    </FlexboxLayout>
+                    <!--                    <Label textWrap="true">-->
+                    <!--                        <FormattedString>-->
+                    <!--                        -->
+
+                    <!--                        </FormattedString>-->
+                    <!--                    </Label>-->
+                </StackLayout>
+
+            </GridLayout>
+            <StackLayout style="margin-top: 40px;">
+                <FlexboxLayout flexWrap="wrap">
+                    <Label text=" ¿Ya tienes una cuenta?. "></Label>
+                    <Label (tap)="routin()" class="spanl foz-16 foz-411-13" text="Ingresa aquí">
+                    </Label>
+                </FlexboxLayout>
+            </StackLayout>
+            <Button class="colorButomS btn-login" text="Registrarme" (tap)="registrar()"></Button>
+        </StackLayout>
+    </StackLayout>
+</ScrollView>

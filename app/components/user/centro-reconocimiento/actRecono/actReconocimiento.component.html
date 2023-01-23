@@ -1,0 +1,67 @@
+<ScrollView>
+    <ScrollView>
+        <StackLayout>
+            <StackLayout height="200px" width="100%" style="background-color: transparent;">
+                <GridLayout rows="auto, auto" columns="100px,*">
+                    <StackLayout col="0" row="0" (tap)="cerrar()" [nsRouterLink]="['/app/centro-reconocimiento']">
+                        <Image style="margin-top: 25px" src="~/images/flechaIZ.png" width="40%"
+                               stretch="aspectFit"></Image>
+                    </StackLayout>
+                    <StackLayout col="1" row="0">
+                        <Label
+                                style="color: #646464;text-align: left;padding-top: 25px;padding-left: 25; font-size: 15;"
+                                textWrap="true" text="{{Titulo}}"></Label>
+                    </StackLayout>
+
+                </GridLayout>
+            </StackLayout>
+
+
+            <StackLayout *ngIf="Tpimagen">
+                <Image pinchToZoom width="100%" [src]="foto" stretch="aspectFit"></Image>
+            </StackLayout>
+
+
+            <StackLayout *ngIf="Tpaudio">
+                <GridLayout rows="*" columns="*" (tap)="togglePlay()">
+                    <Image src="~/images/audioActividad.png" width="100%" stretch="aspectFit"></Image>
+                    <Image *ngIf="!audioService.isAudioPlaying()" src="~/images/video.png" width="30%"
+                           stretch="aspectFit"></Image>
+                </GridLayout>
+            </StackLayout>
+
+            <StackLayout *ngIf="Tpvideo">
+                <StackLayout>
+                    <!--                    <VideoPlayer id="video-player" [src]="video" autoplay="true" height="300" controls="true"-->
+                    <!--                                 fill="true">-->
+                    <!--                    </VideoPlayer>-->
+                    <VideoPlayer [src]="video"
+                                 autoplay="true"
+                                 height="300" height="280" controls="true" id="nativeVideoPlayer"></VideoPlayer>
+                </StackLayout>
+            </StackLayout>
+
+
+            <StackLayout>
+                <ActivityIndicator [busy]="isBusy"></ActivityIndicator>
+            </StackLayout>
+
+            <StackLayout *ngIf="ready">
+                <AudioPlayer></AudioPlayer>
+            </StackLayout>
+
+
+            <!--            <StackLayout style="margin-top: 40px;">-->
+            <!--                <GridLayout rows="*" columns="*,*" width="80%">-->
+            <!--                    <StackLayout row="0" col="0" (tap)="cerrar()">-->
+            <!--                        <StackLayout style="background-color: white;border-radius: 26%;border-width: 1-->
+            <!--	                    ;border-color: #646464;margin-right: 25px;" height="110px">-->
+            <!--                            <Label class="foz-18" style="color: #646464;text-align: center;margin-top: 20px;"-->
+            <!--                                   textWrap="true" text="Cerrar"></Label>-->
+            <!--                        </StackLayout>-->
+            <!--                    </StackLayout>-->
+            <!--                </GridLayout>-->
+            <!--            </StackLayout>-->
+        </StackLayout>
+    </ScrollView>
+</ScrollView>

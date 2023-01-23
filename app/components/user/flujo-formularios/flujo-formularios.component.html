@@ -1,0 +1,30 @@
+<ActionBar class="color" title="Flujo Formularios">
+	<ActionItem icon="res://home" class="" android.position="right" [nsRouterLink]="['/app/welcome']">
+	</ActionItem>
+</ActionBar>
+
+<GridLayout>
+	<Label *ngIf="Sincontenido" textWrap="true"
+		text="Lo sentimos, no se encuntran datos para el formulario Seleccionado" class="h2"></Label>
+	<ListView [items]="FormulariosFlujo" (itemTap)="onItemTap($event)" style="height:2000px">
+		<ng-template let-formulario="item">
+			<FlexboxLayout flexDirection="row">
+				<!-- <Label [text]="formulario.txFormulario" class="t-12" verticalAlignment="center" style="width: 100%">
+                    </Label> 
+				-->
+				<Label textWrap="true" [text]="formulario.fecha" class="t-12" verticalAlignment="center"
+					style="width: 80%">
+				</Label>
+				<Label textWrap="true" [text]="formulario.idTransaccion" class="t-12" verticalAlignment="center"
+					style="width: 80%">
+				</Label>
+				<Label textWrap="true" [text]="formulario.idRespuesta" class="t-12" verticalAlignment="center"
+					style="width: 80%">
+				</Label>
+				<Label textWrap="true" [text]="formulario.puntaje" class="t-12" verticalAlignment="center"
+					style="width: 80%">
+				</Label>
+			</FlexboxLayout>
+		</ng-template>
+	</ListView>
+</GridLayout>

@@ -1,0 +1,230 @@
+<ActionBar class="color" title="Reconocimiento">
+    <NavigationButton icon="~/images/flechaIZ.png" android.position="left" [nsRouterLink]="['/app/welcome']">
+    </NavigationButton>
+</ActionBar>
+<ScrollView>
+    <StackLayout style="border-radius: 10%;" class="width60">
+        <Label class="TituMain foz-24 foz-411-18 foz-360-18" textWrap="true"
+               text="¿Que acompaña tu estrés?"></Label>
+        <Label class="foz-18 foz-411-13 foz-360-13" style="text-align: center; margin: 25px;" textWrap="true"
+               text="Seleccionar máximo 6 opciones y dales un orden de prioridad"></Label>
+
+
+        <GridLayout columns="*,*,*" rows="*,*,*,*,*" style="margin-top: 35px;">
+            <StackLayout col="0" row="0">
+                <StackLayout *ngFor="let item of ElementosIra[0]">
+                    <GridLayout class="mgT15 mgL20" (tap)="onTap($event)" columns="30px,*" rows="30px,*" width="90%"
+                                id="{{item.id}}">
+                        <StackLayout col="0" row="0">
+                            <Label width="70px" text="✔" class="checkSelect"
+                                   *ngIf="item.id == ElementosID[0] || item.id == ElementosID[1] || item.id == ElementosID[2] || item.id == ElementosID[3] || item.id == ElementosID[4] || item.id == ElementosID[5]; else elseBlock">
+                            </Label>
+                            <ng-template #elseBlock>
+                                <StackLayout class="checkNormal" height="70px">
+                                </StackLayout>
+                            </ng-template>
+                        </StackLayout>
+                        <StackLayout col="1" row="0">
+                            <Label class="foz-24 foz-360-14" text="  {{item.descripcion | titlecase}}">
+                            </Label>
+                        </StackLayout>
+                    </GridLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout col="1" row="0">
+                <StackLayout *ngFor="let item of ElementosIra[1]">
+                    <GridLayout class="mgT15 mgL20" (tap)="onTap($event)" columns="30px,*" rows="30px,*" width="90%"
+                                id="{{item.id}}">
+                        <StackLayout col="0" row="0">
+                            <Label width="70px" text="✔" class="checkSelect"
+                                   *ngIf="item.id == ElementosID[0] || item.id == ElementosID[1] || item.id == ElementosID[2] || item.id == ElementosID[3] || item.id == ElementosID[4] || item.id == ElementosID[5]; else elseBlock">
+                            </Label>
+                            <ng-template #elseBlock>
+                                <StackLayout class="checkNormal" height="70px">
+                                </StackLayout>
+                            </ng-template>
+                        </StackLayout>
+                        <StackLayout col="1" row="0">
+                            <Label class="foz-24 foz-360-14" text="  {{item.descripcion | titlecase}}">
+                            </Label>
+                        </StackLayout>
+                    </GridLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout col="2" row="0">
+                <StackLayout *ngFor="let item of ElementosIra[2]">
+                    <GridLayout class="mgT15 mgL20" (tap)="onTap($event)" columns="30px,*" rows="30px,*" width="90%"
+                                id="{{item.id}}">
+                        <StackLayout col="0" row="0">
+                            <Label width="70px" text="✔" class="checkSelect"
+                                   *ngIf="item.id == ElementosID[0] || item.id == ElementosID[1] || item.id == ElementosID[2] || item.id == ElementosID[3] || item.id == ElementosID[4] || item.id == ElementosID[5]; else elseBlock">
+                            </Label>
+                            <ng-template #elseBlock>
+                                <StackLayout class="checkNormal" height="70px">
+                                </StackLayout>
+                            </ng-template>
+                        </StackLayout>
+                        <StackLayout col="1" row="0">
+                            <Label class="foz-24 foz-360-14" text="  {{item.descripcion | titlecase}}">
+                            </Label>
+                        </StackLayout>
+                    </GridLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout colSpan="3" col="0" row="1" style="margin-top: 20px; margin-bottom: 20px;">
+                <Label class="line" text="       _________________________________________________"></Label>
+            </StackLayout>
+            <StackLayout col="0" row="2">
+                <StackLayout *ngFor="let item of ElementosMiedo[0]">
+                    <GridLayout class="mgT15" (tap)="onTap($event)" columns="30px,*" rows="30px,*" width="90%"
+                                id="{{item.id}}">
+                        <StackLayout col="0" row="0">
+                            <Label width="70px" text="✔" class="checkSelect"
+                                   *ngIf="item.id == ElementosID[0] || item.id == ElementosID[1] || item.id == ElementosID[2] || item.id == ElementosID[3] || item.id == ElementosID[4] || item.id == ElementosID[5]; else elseBlock">
+                            </Label>
+                            <ng-template #elseBlock>
+                                <StackLayout class="checkNormal" height="70px">
+                                </StackLayout>
+                            </ng-template>
+                        </StackLayout>
+                        <StackLayout col="1" row="0">
+                            <Label class="foz-24 foz-360-14" text="  {{item.descripcion | titlecase}}">
+                            </Label>
+                        </StackLayout>
+                    </GridLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout col="1" row="2">
+                <StackLayout *ngFor="let item of ElementosMiedo[1]">
+                    <GridLayout class="mgT15" (tap)="onTap($event)" columns="30px,*" rows="30px,*" width="90%"
+                                id="{{item.id}}">
+                        <StackLayout col="0" row="0">
+                            <Label width="70px" text="✔" class="checkSelect"
+                                   *ngIf="item.id == ElementosID[0] || item.id == ElementosID[1] || item.id == ElementosID[2] || item.id == ElementosID[3] || item.id == ElementosID[4] || item.id == ElementosID[5]; else elseBlock">
+                            </Label>
+                            <ng-template #elseBlock>
+                                <StackLayout class="checkNormal" height="70px">
+                                </StackLayout>
+                            </ng-template>
+                        </StackLayout>
+                        <StackLayout col="1" row="0">
+                            <Label class="foz-24 foz-360-14" text="  {{item.descripcion | titlecase}}">
+                            </Label>
+                        </StackLayout>
+                    </GridLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout col="2" row="2">
+                <StackLayout *ngFor="let item of ElementosMiedo[2]">
+                    <GridLayout class="mgT15" (tap)="onTap($event)" columns="30px,*" rows="30px,*" width="90%"
+                                id="{{item.id}}">
+                        <StackLayout col="0" row="0">
+                            <Label width="70px" text="✔" class="checkSelect"
+                                   *ngIf="item.id == ElementosID[0] || item.id == ElementosID[1] || item.id == ElementosID[2] || item.id == ElementosID[3] || item.id == ElementosID[4] || item.id == ElementosID[5]; else elseBlock">
+                            </Label>
+                            <ng-template #elseBlock>
+                                <StackLayout class="checkNormal" height="70px">
+                                </StackLayout>
+                            </ng-template>
+                        </StackLayout>
+                        <StackLayout col="1" row="0">
+                            <Label class="foz-24 foz-360-14" text="  {{item.descripcion | titlecase}}">
+                            </Label>
+                        </StackLayout>
+                    </GridLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout colSpan="3" col="0" row="3" style="margin-top: 20px; margin-bottom: 20px;">
+                <Label class="line" text="       _________________________________________________"></Label>
+            </StackLayout>
+            <StackLayout col="0" row="4">
+                <StackLayout *ngFor="let item of ElementosTristeza[0]">
+                    <GridLayout class="mgT15" (tap)="onTap($event)" columns="30px,*" rows="30px,*" width="90%"
+                                id="{{item.id}}">
+                        <StackLayout col="0" row="0">
+                            <Label width="70px" text="✔" class="checkSelect"
+                                   *ngIf="item.id == ElementosID[0] || item.id == ElementosID[1] || item.id == ElementosID[2] || item.id == ElementosID[3] || item.id == ElementosID[4] || item.id == ElementosID[5]; else elseBlock">
+                            </Label>
+                            <ng-template #elseBlock>
+                                <StackLayout class="checkNormal" height="70px">
+                                </StackLayout>
+                            </ng-template>
+                        </StackLayout>
+                        <StackLayout col="1" row="0">
+                            <Label class="foz-24 foz-360-14" text="  {{item.descripcion | titlecase}}">
+                            </Label>
+                        </StackLayout>
+                    </GridLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout col="1" row="4">
+                <StackLayout *ngFor="let item of ElementosTristeza[1]">
+                    <GridLayout class="mgT15" (tap)="onTap($event)" columns="30px,*" rows="30px,*" width="90%"
+                                id="{{item.id}}">
+                        <StackLayout col="0" row="0">
+                            <Label width="70px" text="✔" class="checkSelect"
+                                   *ngIf="item.id == ElementosID[0] || item.id == ElementosID[1] || item.id == ElementosID[2] || item.id == ElementosID[3] || item.id == ElementosID[4] || item.id == ElementosID[5]; else elseBlock">
+                            </Label>
+                            <ng-template #elseBlock>
+                                <StackLayout class="checkNormal" height="70px">
+                                </StackLayout>
+                            </ng-template>
+                        </StackLayout>
+                        <StackLayout col="1" row="0">
+                            <Label class="foz-24 foz-360-14" text="  {{item.descripcion | titlecase}}">
+                            </Label>
+                        </StackLayout>
+                    </GridLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout col="2" row="4">
+                <StackLayout *ngFor="let item of ElementosTristeza[2]">
+                    <GridLayout class="mgT15" (tap)="onTap($event)" columns="30px,*" rows="30px,*" width="90%"
+                                id="{{item.id}}">
+                        <StackLayout col="0" row="0">
+                            <Label width="70px" text="✔" class="checkSelect"
+                                   *ngIf="item.id == ElementosID[0] || item.id == ElementosID[1] || item.id == ElementosID[2] || item.id == ElementosID[3] || item.id == ElementosID[4] || item.id == ElementosID[5]; else elseBlock">
+                            </Label>
+                            <ng-template #elseBlock>
+                                <StackLayout class="checkNormal" height="70px">
+                                </StackLayout>
+                            </ng-template>
+                        </StackLayout>
+                        <StackLayout col="1" row="0">
+                            <Label class="foz-24 foz-360-14" text="  {{item.descripcion | titlecase}}">
+                            </Label>
+                        </StackLayout>
+                    </GridLayout>
+                </StackLayout>
+            </StackLayout>
+        </GridLayout>
+
+
+        <StackLayout class="contenedorSiguiente" *ngIf="contador != 0">
+            <GridLayout columns="*,*" rows="45px" (tap)="close()" style="vertical-align: center; text-align: center;">
+                <StackLayout col="0" row="0" verticalAlignment="center" style="vertical-align: center; text-align: center;">
+                    <Label (tap)="close()" style="align-items:center; vertical-align: center; text-align: center;" textWrap="true" text="      Agregar" ></Label>
+                </StackLayout>
+                <AbsoluteLayout col="1" row="0" verticalAlignment="center" style="vertical-align: center; text-align: center;">
+                    <Image style="align-items: center; left: 110px;font-weight: bold;vertical-align: center; text-align: center;" width="30%"
+                           src="~/images/mas.png" stretch="aspectFit">
+                    </Image>
+                </AbsoluteLayout>
+            </GridLayout>
+        </StackLayout>
+
+
+        <StackLayout class="contenedorSiguienteIn" *ngIf="contador == 0">
+            <GridLayout columns="*,*" rows="45px" (tap)="alert()">
+                <StackLayout col="0" row="0" verticalAlignment="center">
+                    <Label (tap)="alert()" style="align-items:center; " textWrap="true" text="      Agregar"></Label>
+                </StackLayout>
+                <AbsoluteLayout col="1" row="0" verticalAlignment="center">
+                    <Image style="align-items: center; left: 110px;font-weight: bold;" width="30%"
+                           src="~/images/mas.png" stretch="aspectFit">
+                    </Image>
+                </AbsoluteLayout>
+            </GridLayout>
+        </StackLayout>
+    </StackLayout>
+</ScrollView>

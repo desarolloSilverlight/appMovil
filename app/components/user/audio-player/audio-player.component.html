@@ -1,0 +1,18 @@
+<GridLayout columns="60px,40px,*,60px" rows="*" verticalAlignment="center">
+    <StackLayout col="0" row="0" verticalAlignment="center">
+        <Image src="~/images/play1.png" *ngIf="!audioService.isAudioPlaying()" (tap)="audioService.play()" width="80%"
+               stretch="aspectFit"></Image>
+        <Image src="~/images/pause.png" *ngIf="audioService.isAudioPlaying()" (tap)="audioService.pausePlayer()"
+               width="80%" stretch="aspectFit"></Image>
+    </StackLayout>
+
+    <StackLayout col="1" row="0" verticalAlignment="center">
+        <Label [text]="currentDuration"></Label>
+    </StackLayout>
+    <StackLayout col="2" row="0" verticalAlignment="center">
+        <Slider [maxValue]="segundos" [value]="segundo" (valueChange)="onSliderValueChange($event)"></Slider>
+    </StackLayout>
+    <StackLayout col="3" row="0" verticalAlignment="center">
+        <Label [text]="duration"></Label>
+    </StackLayout>
+</GridLayout>

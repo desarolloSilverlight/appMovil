@@ -1,0 +1,80 @@
+<ScrollView>
+	<StackLayout class="fondoT">
+		<StackLayout height="200px" width="100%" style="background-color: transparent;">
+			<GridLayout rows="auto, auto" columns="*,100px">
+				<StackLayout col="0" row="0">
+					<Label style="color: #646464;text-align: left;font-size: 15;padding: 40px;" textWrap="true"
+						text="Califica el alivio de tus síntomas"></Label>
+				</StackLayout>
+				<StackLayout col="1" row="0" [nsRouterLink]="['/app/actividades']">
+					<Image style="margin-top: 25px" src="~/images/x.png" width="30%" stretch="aspectFit"></Image>
+				</StackLayout>
+			</GridLayout>
+		</StackLayout>
+
+		<Label style="margin-top:30px;color: #646464;font-size: 15;font-weight: bold;text-align: center;"
+			textWrap="true"
+			text="Después de realizar todas tus actividades, ¿cómo te sientes en cada zona del cuerpo que seleccionaste previamente?">
+		</Label>
+		<!-- 
+
+		-->
+		<StackLayout style="margin-left: 60px;margin-top:100px;margin-right: 60px;">
+			<GridLayout rows="*" columns="30px,50px">
+				<StackLayout col="0" row="0">
+					<StackLayout style="border-radius: 35%;border-color: #84C5C5;border-width: 1;">
+						<Label style="color: #24214A;text-align: center;" textWrap="true" text="P1"></Label>
+					</StackLayout>
+				</StackLayout>
+				<StackLayout col="1" row="0" style="margin-left: 15px;">
+					<Label style="color: #24214A;text-align: center;font-size: 14;font-weight: bold;" textWrap="true"
+						text="Frente"></Label>
+				</StackLayout>
+			</GridLayout>
+			<GridLayout rows="*" columns="*,*,*,*">
+				<StackLayout col="0" row="0" class="items">
+					<Image style="margin: 30px;" src="~/images/llorando.png" width="30%" stretch="aspectFit"></Image>
+					<Label style="color: #646464;text-align: center;font-size: 12;" textWrap="true"
+						text="Sin cambio"></Label>
+				</StackLayout>
+				<StackLayout col="1" row="0" class="items">
+					<Image style="margin: 30px;" src="~/images/enojado.png" width="30%" stretch="aspectFit"></Image>
+					<Label style="color: #646464;text-align: center;font-size: 12;" textWrap="true"
+						text="Algo de mejoría"></Label>
+				</StackLayout>
+				<StackLayout col="2" row="0" class="item">
+					<Image style="margin: 30px;" src="~/images/contento.png" width="30%" stretch="aspectFit"></Image>
+					<Label style="color: #646464;text-align: center;font-size: 12;" textWrap="true"
+						text="Mucho mejor"></Label>
+				</StackLayout>
+				<StackLayout col="3" row="0" class="itemSelect">
+					<Image style="margin: 30px;" src="~/images/enamorado.png" width="30%" stretch="aspectFit"></Image>
+					<Label style="color: #646464;text-align: center;font-size: 12;" textWrap="true"
+						text="Aliviado"></Label>
+				</StackLayout>
+			</GridLayout>
+			<Label style="color: #C5CCD4;text-align: center;font-size: 12;" textWrap="true"
+				text="___________________________________________"></Label>
+		</StackLayout>
+		<!-- 
+		-->
+		<StackLayout style="margin-top: 40px;">
+			<GridLayout rows="*" columns="*,*" width="80%">
+				<StackLayout row="0" col="0" [nsRouterLink]="['/app/actividades']">
+					<StackLayout style="background-color: white;border-radius: 26%;border-width: 1
+                    ;border-color: #646464;margin-right: 25px;" height="110px">
+						<Label style="color: #646464;text-align: center;margin-top: 20px;" textWrap="true"
+							text="Cerrar"></Label>
+					</StackLayout>
+				</StackLayout>
+				<StackLayout row="0" col="1" [nsRouterLink]="['/app/actividades']">
+					<StackLayout style="background-color: #45669C;border-radius: 26%;border-width: 1
+                    ;border-color: #646464;margin-left: 25px;" height="110px">
+						<Label style="color: #FFFFFF;text-align: center;font-weight: bold;margin-top: 20px;"
+							textWrap="true" text="Enviar"></Label>
+					</StackLayout>
+				</StackLayout>
+			</GridLayout>
+		</StackLayout>
+	</StackLayout>
+</ScrollView>

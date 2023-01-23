@@ -1,0 +1,18 @@
+<ActionBar background="white" title="My App" color.ios="white"></ActionBar>
+<ScrollView>
+    <StackLayout class="main">
+        <StackLayout class="ContImage">
+            <Image class="logoZero" src="~/images/logozero.png" stretch="aspectFit"></Image>
+        </StackLayout>
+        <StackLayout width="90%">
+            <Label class="fz-18 letraR"
+                text="Indicanos el correo electrónico con el cual te registrarte,para poder recuperar tu contraseña"
+                textWrap="true"></Label>
+        </StackLayout>
+        <StackLayout width="70%">
+            <TextField [(ngModel)]="email" class="control texto -primary -rounded-sm" hint="✉️ micorreo@ejemplo.co">
+            </TextField>
+            <Button class="colorButomS btn-login" text="Recuperar Contraseña" (tap)="submit()"></Button>
+        </StackLayout>
+    </StackLayout>
+</ScrollView>

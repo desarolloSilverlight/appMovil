@@ -1,0 +1,67 @@
+<ActionBar title="{{ pageTitle }}">
+    <NavigationButton icon="~/images/flechaIZ.png" [nsRouterLink]="['/app/welcome']"></NavigationButton>
+    <!--<ActionItem icon="~/images/economico.png" tap="save()" ios.position="right" android.position="right">
+    </ActionItem>-->
+</ActionBar>
+
+<StackLayout>
+    <ScrollView>
+        <StackLayout class="control width-360-85 width-411-80">
+            <StackLayout style="align-items: center; height: 300px;width: 300%;margin-bottom: 80px;">
+                <Image style="border-radius: 36%;" [src]="foto" stretch="aspectFit">
+                </Image>
+            </StackLayout>
+
+            <Label text="Nombre"></Label>
+            <TextField [(ngModel)]="nombre" class="texto -primary -rounded-sm esp">
+            </TextField>
+
+            <Label text="Apellido"></Label>
+            <TextField [(ngModel)]="apellido" class="texto -primary -rounded-sm esp">
+            </TextField>
+
+            <Label text="Numero de Documento"></Label>
+            <TextField [(ngModel)]="numDocumento" class="texto -primary -rounded-sm esp">
+            </TextField>
+
+<!--            <Label text="Empresa"></Label>-->
+<!--            <TextField [(ngModel)]="empresa" class="texto -primary -rounded-sm esp">-->
+<!--            </TextField>-->
+
+<!--            <Label text="Contraseña *"></Label>-->
+            <!--            <GridLayout columns="*, 40px">-->
+            <!--                <StackLayout col="0" style="margin-top: 50px;">-->
+            <!--                    <TextField *ngIf="ver" [(ngModel)]="Contrasena" class="texto -primary -rounded-sm esp"-->
+            <!--                        hint="🔒 Contraseña">-->
+            <!--                    </TextField>-->
+            <!--                    <TextField *ngIf="!ver" [(ngModel)]="Contrasena" class="texto -primary -rounded-sm esp"-->
+            <!--                        secure="true" hint="🔒 Contraseña">-->
+            <!--                    </TextField>-->
+            <!--                </StackLayout>-->
+            <!--                <StackLayout col="1" class="contojo controlojo-360" (tap)="mostrarP()">-->
+            <!--                    <Image src="~/images/ojo.png" stretch="aspectFit">-->
+            <!--                    </Image>-->
+            <!--                </StackLayout>-->
+            <!--            </GridLayout>-->
+            <!--            <Label text="Repertir contraseña *"></Label>-->
+            <!--            <GridLayout columns="*, 40px">-->
+            <!--                <StackLayout col="0" style="margin-top: 50px;">-->
+            <!--                    <TextField *ngIf="ver" [(ngModel)]="ReContrasena" class="texto -primary -rounded-sm esp"-->
+            <!--                        hint="🔒 Contraseña">-->
+            <!--                    </TextField>-->
+            <!--                    <TextField *ngIf="!ver" [(ngModel)]="ReContrasena" class="texto -primary -rounded-sm esp"-->
+            <!--                        secure="true" hint="🔒 Contraseña">-->
+            <!--                    </TextField>-->
+            <!--                </StackLayout>-->
+            <!--                <StackLayout col="1" class="contojo controlojo-360" (tap)="mostrarP()">-->
+            <!--                    <Image src="~/images/ojo.png" stretch="aspectFit">-->
+            <!--                    </Image>-->
+            <!--                </StackLayout>-->
+            <!--            </GridLayout>-->
+            <!--            <Label *ngIf="Contrasena != ReContrasena" text="Contraseñas distintas"-->
+            <!--                style="font-size: 9px;margin: 15px;"></Label>-->
+
+            <Button class="color1 btn-login" text="Guardar cambios" (tap)="save()"></Button>
+        </StackLayout>
+    </ScrollView>
+</StackLayout>

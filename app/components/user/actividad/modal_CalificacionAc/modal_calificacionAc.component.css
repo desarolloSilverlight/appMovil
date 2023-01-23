@@ -1,0 +1,34 @@
+.fondoT{
+    background-image: url("~/images/cabezaRecono.png") no-repeat;
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.itemSelect{
+    align-items: center;
+    background-color: #84C5C5;
+    color: #FFFFFF;
+    border-radius: 15%;
+}
+.items{
+    align-items: center;
+}
+.ctnbtn1{
+    background-color: white;border-radius: 26%;border-width: 1
+        	                    ;border-color: #646464;margin-right: 25px;
+                                
+                        height:110px
+}
+.btn1{
+    color: #646464;text-align: center;margin-top: 20px;
+}
+.ctnbtn2{
+    background-color: #45669C;border-radius: 26%;border-width: 1
+        	                    ;border-color: #646464;margin-left: 25px;
+                                
+                        height:110px
+}
+.btn2{
+    color: #FFFFFF;text-align: center;font-weight: bold;margin-top: 20px;
+}
+

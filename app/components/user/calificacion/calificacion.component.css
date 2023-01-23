@@ -1,0 +1,15 @@
+.fondoT{
+    background-image: url("~/images/cabezaRecono.png") no-repeat;
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.itemSelect{
+    align-items: center;
+    background-color: #84C5C5;
+    color: #FFFFFF;
+    border-radius: 15%;
+}
+.items{
+    align-items: center;
+}

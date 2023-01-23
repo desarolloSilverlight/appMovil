@@ -1,0 +1,27 @@
+<ActionBar class="color" title="Formularios">
+    <ActionItem icon="res://home" class="" android.position="right" [nsRouterLink]="['/app/welcome']">
+    </ActionItem>
+</ActionBar>
+
+<GridLayout>
+    <StackLayout class="home-panel">
+        <StackLayout>
+            <Label textWrap="true" [text]="pregunta.descripcion" class="h3"></Label>
+        </StackLayout>
+
+        <StackLayout *ngIf="pregunta.tpPregunta == 2">
+            <Slider value="0" [minValue]="pregunta.minValor" [maxValue]="pregunta.maxValor" [thumbLabel]="true"
+                (valueChange)="onSliderValueChange($event)">
+            </Slider>
+        </StackLayout>
+
+        <StackLayout *ngIf="pregunta.tpPregunta == 1">
+            <ListPicker [items]="respuestas2" [(ngModel)]="selectedListPickerIndex"></ListPicker>
+        </StackLayout>
+
+        <StackLayaut>
+            <Button text="Siguiente" class="color1" (tap)="onButtonTap()"></Button>
+        </StackLayaut>
+
+    </StackLayout>
+</GridLayout>

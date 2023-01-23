@@ -1,0 +1,54 @@
+<ScrollView>
+    <StackLayout class="fondoT">
+        <StackLayout height="200px" width="100%" style="background-color: transparent;">
+            <GridLayout rows="auto, auto" columns="100px,*">
+                <StackLayout col="0" row="0" (tap)="close($event)">
+                    <Image style="margin-top: 25px" src="~/images/flechaIZ.png" width="30%" stretch="aspectFit"></Image>
+                </StackLayout>
+                <StackLayout col="1" row="0">
+                    <Label style="color: #646464;text-align: left;padding: 25px;font-size: 15;" textWrap="true"
+                           text="Cómo crear nuevas conexiones neuronales"></Label>
+                </StackLayout>
+
+            </GridLayout>
+        </StackLayout>
+        <Label
+                style="color: #45669C;text-align: center;padding: 25px;font-size: 20;font-weight: bold;margin-top: 150px;"
+                textWrap="true" text="Evalúa este ejercicio"></Label>
+
+
+        <StackLayout>
+            <GridLayout rows="*, *" columns="*,*" width="80%">
+                <StackLayout col="0" row="0" class="items" (tap)="onTap($event)" id="1">
+                    <Image style="margin: 30px;" src="~/images/enojado.png" width="30%" stretch="aspectFit"></Image>
+                    <Label style="color: #646464;text-align: center;padding: 25px;font-size: 16;" textWrap="true"
+                           text="No me gustó"></Label>
+                </StackLayout>
+                <StackLayout col="1" row="0" class="items" (tap)="onTap($event)" id="2">
+                    <Image style="margin: 30px;" src="~/images/llorando.png" width="30%" stretch="aspectFit"></Image>
+                    <Label style="color: #646464;text-align: center;padding: 25px;font-size: 16;" textWrap="true"
+                           text="Esperaba más"></Label>
+                </StackLayout>
+                <StackLayout col="0" row="1" class="items" (tap)="onTap($event)" id="3">
+                    <Image style="margin: 30px;" src="~/images/contento.png" width="30%" stretch="aspectFit"></Image>
+                    <Label style="color: #646464;text-align: center;padding: 25px;font-size: 16;" textWrap="true"
+                           text="Está bien"></Label>
+                </StackLayout>
+                <StackLayout col="1" row="1" class="items" (tap)="onTap($event)" id="4">
+                    <Image style="margin: 30px;" src="~/images/enamorado.png" width="30%" stretch="aspectFit"></Image>
+                    <Label style="color: #646464;text-align: center;padding: 25px;font-size: 16;" textWrap="true"
+                           text="Me encantó"></Label>
+                </StackLayout>
+            </GridLayout>
+        </StackLayout>
+        <StackLayout style="margin-top: 80px;">
+            <GridLayout rows="90px" columns="*" width="80%">
+                <StackLayout row="0" col="1" (tap)="close($event)">
+                    <StackLayout class="ctnbtn2">
+                        <Label class="btn2" textWrap="true" text="Enviar"></Label>
+                    </StackLayout>
+                </StackLayout>
+            </GridLayout>
+        </StackLayout>
+    </StackLayout>
+</ScrollView>

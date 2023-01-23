@@ -1,0 +1,43 @@
+<ActionBar title="" class="titulo">
+    <ActionItem class="bar" icon="~/images/Raster.png" ios.position="left" android.position="left">
+    </ActionItem>
+</ActionBar>
+
+<ScrollView class="page">
+    <StackLayout>
+        <StackLayout class="ContImage" verticalAlignment="center">
+            <Image class="logoZero" src="~/images/logozero.png" stretch="aspectFit"></Image>
+        </StackLayout>
+        <Label style=" text-align: center;color: #646464;" class="login-h2 h2 foz-24"
+               text="Te damos la bienvenida hoy"></Label>
+        <Label style="text-align: center;color: #C5CCD4;" text="________________________________________"></Label>
+        <Label class="foz-24 ingresarLogin" style=" text-align: center;color: #646464;font-weight: bold"
+               text="Ingresar"></Label>
+        <StackLayout class="home-panel control">
+            <Label class="TpLetra" text="   Correo electrónico"></Label>
+            <TextField [(ngModel)]="emeil" class="texto -primary -rounded-sm foz-18" hint="✉️ micorreo@ejemplo.co">
+            </TextField>
+            <StackLayout class="home-panel">
+                <GridLayout columns="auto, *, auto">
+                    <Label col="0" text="Contraseña"></Label>
+                    <Label [nsRouterLink]="['/recuperar']" col="2" class="foz-13 foz-411-13 foz-360-9 texto2"
+                           text="Recuperar contraseña"></Label>
+                </GridLayout>
+                <GridLayout columns="*, 40px">
+                    <StackLayout col="0" class="panel-pass">
+                        <TextField [(ngModel)]="password" class="texto -primary -rounded-sm esp foz-18" [secure]="ver"
+                                   hint="🔒 Contraseña">
+                        </TextField>
+                    </StackLayout>
+                    <StackLayout col="1" class="contojo controlojo-411-L controlojo-360" (tap)="mostrarP()">
+                        <Image src="~/images/ojo.png" stretch="aspectFit">
+                        </Image>
+                    </StackLayout>
+                </GridLayout>
+            </StackLayout>
+            <Button class="color btn-login" text="Ingresar" (tap)="submit()" *ngIf="!busy"></Button>
+            <ActivityIndicator *ngIf="busy" [busy]="busy"></ActivityIndicator>
+            <Button class="color btn-login" text="Registro" [nsRouterLink]="['/registro']" *ngIf="!busy"></Button>
+        </StackLayout>
+    </StackLayout>
+</ScrollView>

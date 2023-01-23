@@ -1,0 +1,38 @@
+.checkSelect {
+    text-align: center;
+    background-color: #84C5C5;
+    border-radius: 5;
+    color: white;
+}
+
+.checkNormal {
+    border-width: 1;
+    border-color: #C5CCD4;
+    border-radius: 5;
+    background-color: white;
+}
+
+.contenedorSiguiente{
+    display: flex;
+    background: #45669C;
+    color: white;
+    width: 350px;
+    text-align: center;
+    border-radius: 25%;
+    align-items: center;
+    margin: 80px;
+}
+
+.contenedorSiguienteIn{
+    background: #969FAA;
+    color: black;
+    width: 350px;
+    text-align: center;
+    border-radius: 25%;
+    align-items: center;
+    margin: 80px;
+    vertical-align: center;
+}
+
+
+

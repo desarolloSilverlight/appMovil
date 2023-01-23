@@ -1,0 +1,2075 @@
+@import '~@nativescript/theme/css/core.css';
+@import '~@nativescript/theme/css/default.css';
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v27/KFOkCnqEu92Fr1MmgVxFIzIFKw.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+/* cyrillic */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v27/KFOkCnqEu92Fr1MmgVxMIzIFKw.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* greek-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v27/KFOkCnqEu92Fr1MmgVxEIzIFKw.woff2) format('woff2');
+    unicode-range: U+1F00-1FFF;
+}
+
+/* greek */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v27/KFOkCnqEu92Fr1MmgVxLIzIFKw.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+}
+
+/* vietnamese */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v27/KFOkCnqEu92Fr1MmgVxHIzIFKw.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v27/KFOkCnqEu92Fr1MmgVxGIzIFKw.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v27/KFOkCnqEu92Fr1MmgVxIIzI.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.btn {
+    font-size: 18;
+}
+
+
+.tablet .btn-login {
+    align-self: center;
+    width: 40%;
+}
+
+.tablet .control {
+    align-self: center;
+    width: 60%;
+}
+
+.tablet .controlojo {
+    margin-top: 6px;
+}
+
+.tablet .controlojoR {
+    margin-top: 20px;
+}
+
+.tablet .contendor80 {
+    width: 40%;
+}
+
+.tablet .cnttermino {
+    width: 15px;
+    height: 55px;
+}
+
+.tablet .icon-360 {
+    width: 60%;
+}
+
+.tablet .logoW60 {
+    width: 60%;
+}
+
+
+.tablet .foz-13 {
+    font-size: 13;
+}
+
+.tablet .foz-16 {
+    font-size: 16;
+}
+
+.tablet .foz-18 {
+    font-size: 18;
+}
+
+.tablet .foz-24 {
+    font-size: 24;
+}
+
+.tablet .width60 {
+    width: 60%;
+}
+
+.tablet .width80 {
+    width: 80%;
+}
+
+.tablet .width40 {
+    width: 40%;
+}
+
+.tablet .width10 {
+    width: 10%;
+}
+
+.tablet .w200 {
+    width: 200px;
+}
+
+
+.tablet .h300 {
+    height: 300px;
+}
+
+
+.tablet .mgT15 {
+    margin-top: 15px;
+}
+
+.tablet .mgL30 {
+    margin-left: 30%;
+}
+
+.tablet .h-400 {
+    height: 400px;
+}
+
+.tablet .contenedorWelcome {
+    height: 600px;
+    width: 700px
+}
+
+.tablet .contenedorContenido {
+    height: 350px;
+    width: 600px;
+}
+
+.tablet .contLogo {
+    position: absolute;
+    background-color: #84C5C5;
+    width: 15%;
+    margin-top: 40px;
+    border-radius: 80%;
+}
+
+.tablet .textocontenedorSiguiente {
+    /*margin-top: 30px;*/
+    text-align: center;
+}
+
+.tablet .imagencontenedorSiguiente {
+    /*margin-top: 20px;*/
+    left: 110px;
+    font-weight: bold;
+}
+
+/*--------------------------------------------------------*/
+
+
+.android400 .controlojo-411 {
+    height: 45;
+    margin-top: 10px;
+}
+
+.android400 .controlojo-411-L {
+    height: 42;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+.android400 .logoW40 {
+    width: 40%;
+}
+
+.android400 .contLogo {
+    background-color: #84C5C5;
+    width: 200px;
+    margin: 40px;
+    border-radius: 80%;
+    padding: 25px;
+}
+
+.android400 .contLogo2 {
+    background-color: #84C5C5;
+    width: 200px;
+    height: 150px;
+    margin: 40px;
+    border-radius: 80%;
+    padding: 25px;
+}
+
+.android400 .foz-411-9 {
+    font-size: 9;
+}
+
+.android400 .foz-411-13 {
+    font-size: 13;
+}
+
+.android400 .foz-411-16 {
+    font-size: 16;
+}
+
+.android400 .foz-411-18 {
+    font-size: 18;
+}
+
+.android400 .foz-411-20 {
+    font-size: 20;
+}
+
+.android400 .foz-411-24 {
+    font-size: 24;
+}
+
+
+.android400 .width-411-50 {
+    width: 50%;
+}
+
+.android410 .width-411-50 {
+    width: 50%;
+}
+
+.android400 .width-411-60 {
+    width: 60%;
+}
+
+.android400 .width-411-15 {
+    width: 15%;
+}
+
+.android400 .width-411-18 {
+    width: 18%;
+}
+
+.android400 .width-411-80 {
+    width: 80%;
+}
+
+.android400 .width-411-40 {
+    width: 40%;
+}
+
+.android400 .width-411-10 {
+    width: 10%;
+}
+
+.android400 .w-411-200 {
+    width: 200px;
+}
+
+.android400 .w-411-150 {
+    width: 150px;
+}
+
+.android400 .h-411-400 {
+    height: 400px;
+}
+
+.android400 .contenedorWelcome-411 {
+    height: 450px;
+    width: 500px;
+}
+
+.android400 .contenedorSiguiente {
+    background: #45669C;
+    color: white;
+    width: 450px;
+    text-align: center;
+    border-radius: 25%;
+    margin: 80px;
+    margin-bottom: 300px;
+}
+
+.android400 .contenedorSiguienteIn {
+    background: #969FAA;
+    color: black;
+    width: 450px;
+    text-align: center;
+    border-radius: 25%;
+    margin-top: 120px;
+    margin: 80px;
+}
+
+.android400 .textocontenedorSiguiente {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.android400 .imagencontenedorSiguiente {
+    margin-top: 20px;
+    left: 110px;
+    font-weight: bold;
+}
+
+.android400 .contenedorContenido-411 {
+    height: 350px;
+    width: 600px;
+}
+
+.android400 .m15 {
+    margin-top: 15px;
+}
+
+.android380 .m15 {
+    margin-top: 15px;
+}
+
+.android320 .contenedorImagen {
+    width: 100%;
+    height: 500px;
+}
+
+.android320 .contLogo {
+    position: absolute;
+    background-color: #84C5C5;
+    width: 15%;
+    margin-top: 40px;
+    border-radius: 80%;
+}
+
+
+/*--------------------------------------------------------*/
+
+.android360 .h1 {
+    font-size: 18px;
+}
+
+.android360 .foz-24 {
+    font-size: 14;
+}
+
+.android360 .TituMain {
+    font-size: 15 !important;
+    margin-top: 10px !important;
+}
+
+.android380 .TituMain {
+    font-size: 15 !important;
+    margin-top: 10px !important;
+}
+
+.android400 .TituMain {
+    font-size: 15 !important;
+    margin-top: 10px !important;
+}
+
+.android410 .TituMain {
+    font-size: 15 !important;
+    margin-top: 10px !important;
+}
+
+.android360 .title-action-bar {
+    padding-left: 10 !important;
+}
+
+.android360 .contenedorNav {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.android360 .contenedorSiguiente {
+    background: #45669C;
+    color: white;
+    width: 450px;
+    text-align: center;
+    vertical-align: center;
+    border-radius: 25%;
+    margin: 30px;
+    margin-bottom: 120px !important;
+}
+
+.android360 .contenedorSiguienteIn {
+    background: #969FAA;
+    color: white;
+    width: 450px;
+    text-align: center;
+    border-radius: 25%;
+    vertical-align: center;
+    /*margin-top: 120px;*/
+    margin: 30px;
+}
+
+.android360 .textocontenedorSiguiente {
+    /*margin-top: 30px;*/
+    text-align: center;
+    vertical-align: center;
+}
+
+.android360 .imagencontenedorSiguiente {
+    /*margin-top: 20px;*/
+    vertical-align: center;
+    left: 110px;
+    font-weight: bold;
+}
+
+.android360 .controlojo-360 {
+    height: 43;
+    margin-top: -30px;
+}
+
+.android360 .controlojo-360-L {
+    height: 42;
+    margin-top: -25px !important;
+
+}
+
+
+.android360 .icono-360 {
+    margin: 25px;
+    width: 15%;
+    height: 15%;
+    margin-top: 20px;
+}
+
+.android360 .icono2-360 {
+    margin: 25px;
+    width: 15%;
+    height: 15%;
+    margin-top: 20px;
+}
+
+.android360 .icon-360 {
+    /*margin: 25px;*/
+    width: 25%;
+    height: 25%;
+    margin-bottom: 150px;
+}
+
+.android360 .contenedorWelcome-360 {
+    height: 340px;
+    width: 400px
+}
+
+.android360 .contenedorContenido-360 {
+    height: 250px;
+    width: 400px;
+}
+
+.android360 .foz-360-14 {
+    font-size: 10px !important;
+}
+
+.android360 .foz-360-9 {
+    font-size: 17px;
+}
+
+.android360 .foz-360-13 {
+    font-size: 13;
+}
+
+.android360 .title-activity-status {
+    font-size: 11;
+}
+
+.android360 .foz-360-16 {
+    font-size: 16;
+}
+
+.android360 .foz-360-18 {
+    font-size: 14;
+}
+
+.android360 .text-welcome {
+    font-size: 15;
+}
+
+.android360 .foz-360-20 {
+    font-size: 20;
+}
+
+.android360 .foz-360-24 {
+    font-size: 24;
+}
+
+.android320 .contenedorImagen {
+    width: 100%;
+    height: 300px;
+}
+
+
+.android360 .width-360-50 {
+    width: 40%;
+}
+
+.android360 .titulo-actividad {
+    margin-top: 0px !important;
+}
+
+.android360 .width-360-60 {
+    width: 60%;
+}
+
+.android360 .width-411-60 {
+    width: 80%;
+}
+
+.android360 .width-360-15 {
+    width: 15%;
+}
+
+.android360 .width-360-18 {
+    width: 15%;
+}
+
+.android360 .width-360-80 {
+    width: 80%;
+}
+
+.android360 .width-360-85 {
+    width: 85%;
+}
+
+.android360 .width-360-40 {
+    width: 40%;
+}
+
+.android360 .width-360-10 {
+    width: 10%;
+}
+
+.android360 .w-360-200 {
+    width: 200px;
+}
+
+.android360 .w-360-150 {
+    width: 150px;
+}
+
+.android360 .h-360-300 {
+    height: 230px;
+}
+
+.android360 .contLogo {
+    position: absolute;
+    background-color: #84C5C5;
+    width: 90px;
+    height: 90px;
+    margin: 20px;
+    border-radius: 80%;
+}
+
+.android360 .contLogo2 {
+    position: absolute;
+    background-color: #84C5C5;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    border-radius: 80%;
+}
+
+.android360 .Logo {
+    width: 75%;
+}
+
+.android320 .Logo {
+    width: 75%;
+}
+
+.android400 .Logo {
+    width: 10%;
+}
+
+
+/*--------------------------------------------------------*/
+
+
+.android380 .h1 {
+    font-size: 25px;
+}
+
+.android380 .contenedorNav {
+    margin-top: 30px !important;
+    margin-bottom: 20px !important;
+
+}
+
+.android380 .btn-code {
+    height: 90px;
+    margin-bottom: 35px;
+}
+
+.android380 .contenedorSiguiente {
+    background: #45669C;
+    color: white;
+    width: 450px;
+    text-align: center;
+    border-radius: 25%;
+    margin: 80px;
+    margin-bottom: 300px;
+}
+
+.android380 .contenedorSiguienteIn {
+    background: #969FAA;
+    color: black;
+    width: 450px;
+    text-align: center;
+    border-radius: 25%;
+    margin-top: 120px;
+    margin: 80px;
+}
+
+.android380 .textocontenedorSiguiente {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.android380 .imagencontenedorSiguiente {
+    margin-top: 20px;
+    left: 110px;
+    font-weight: bold;
+}
+
+.android380 .h-411-400 {
+    height: 250px;
+}
+
+.android380 .controlojo-360 {
+    height: 43;
+}
+
+.android380 .controlojo-360-L {
+    height: 42;
+    margin-top: 20px !important;
+}
+
+
+.android380 .icono-360 {
+    margin: 25px;
+    width: 15%;
+    height: 15%;
+    margin-top: 30px;
+}
+
+.android380 .icono2-360 {
+
+    margin: 25px;
+    width: 15%;
+    height: 15%;
+    margin-top: 30px;
+}
+
+.android380 .icon-360 {
+    /*margin: 25px;*/
+    width: 26%;
+    height: 26%;
+    margin-bottom: 150px;
+}
+
+.android380 .contenedorRuta {
+    height: 150 !important;
+}
+
+.android380 .contenedorWelcome-360 {
+    height: 450px;
+    width: 500px
+}
+
+.android380 .contenedorContenido-360 {
+    height: 300px;
+    width: 400px;
+}
+
+
+.android380 .foz-360-9 {
+    font-size: 14;
+}
+
+.android380 .foz-360-13 {
+    font-size: 13;
+}
+
+.android380 .foz-360-16 {
+    font-size: 16;
+}
+
+.android380 .foz-360-18 {
+    font-size: 16;
+}
+
+.android380 .foz-360-20 {
+    font-size: 20;
+}
+
+.android380 .foz-360-24 {
+    font-size: 24;
+}
+
+.android380 .contenedorImagen {
+    width: 100%;
+    height: 300px;
+}
+
+
+.android380 .width-360-50 {
+    width: 50%;
+}
+
+.android380 .width-360-60 {
+    width: 60%;
+}
+
+.android380 .width-411-60 {
+    width: 60%;
+}
+
+.android380 .width-360-15 {
+    width: 15%;
+}
+
+.android380 .width-360-18 {
+    width: 18%;
+}
+
+.android380 .width-360-80 {
+    width: 80%;
+}
+
+.android380 .width-360-85 {
+    width: 85%;
+}
+
+.android380 .width-360-40 {
+    width: 40%;
+}
+
+.android380 .width-360-10 {
+    width: 10%;
+}
+
+.android380 .w-360-200 {
+    width: 200px;
+}
+
+.android380 .w-360-150 {
+    width: 150px;
+}
+
+.android380 .h-360-300 {
+    height: 170px;
+}
+
+.android380 .contLogo {
+    position: absolute;
+    background-color: #84C5C5;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    border-radius: 80%;
+}
+
+.android380 .contLogo2 {
+    position: absolute;
+    background-color: #84C5C5;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    border-radius: 80%;
+}
+
+.android380 .Logo {
+    width: 75%;
+}
+
+
+/* --------------------------------------------------------*/
+
+
+.phone .ingresarLogin {
+    margin-top: 70px;
+}
+
+.phone .login-h2 {
+    margin-top: 100px;
+}
+
+.android360 .login-h2, .android380 .login-h2 {
+    margin-top: 30px;
+}
+
+.android360 .ingresarLogin, .android380 .ingresarLogin {
+    margin-top: 30px !important;
+    font-weight: bold;
+}
+
+
+.phone .home-panel {
+    margin-top: 100px;
+}
+
+.android360 .home-panel, .android380 .home-panel {
+    margin-top: 10px !important;
+}
+
+.android360 .home-panel {
+    margin-top: 0 !important;
+}
+
+.android360 .btn-login, .android380 .btn-login {
+
+}
+
+.android410 .mt-pass, .android480 .mt-pass, .android380 .mt-pass {
+    margin-top: 10px;
+}
+
+.android360 .mt-pass {
+    margin-top: -2px !important;
+}
+
+.android360 .texto {
+    /*margin: 110px;*/
+    font-size: 15;
+}
+
+.android360 .btn-code {
+    height: 85px;
+    margin-bottom: 35px;
+}
+
+
+.android360 .panel-pass {
+    margin-top: 0px !important;
+    padding-top: 10px !important;
+}
+
+
+.android380 .panel-pass {
+    margin-top: 10px;
+}
+
+.android380 .contojo {
+    margin-top: -30px;
+}
+
+
+.android360 .btn-login {
+    padding-top: 0 !important;
+}
+
+
+/*---------------------------------------------------------------------------------------------------------*/
+
+
+.android320 .contenedorNav {
+    margin-top: 20px !important;
+    margin-bottom: 10px !important;
+}
+
+.android320 .h1 {
+    font-size: 18px;
+}
+
+.android320 .mt-pass {
+    margin-top: 5px !important;
+}
+
+.android320 .btn-code {
+    height: 70px;
+    margin-bottom: 25px;
+}
+
+.android320 .contenedorSiguiente {
+    background: #45669C;
+    color: white;
+    width: 200px;
+    text-align: center;
+    border-radius: 25%;
+    margin: 80px;
+    margin-bottom: 300px;
+}
+
+.android320 .contenedorSiguienteIn {
+    background: #969FAA;
+    color: black;
+    width: 200px;
+    text-align: center;
+    border-radius: 25%;
+    margin: 80px;
+    margin-bottom: 300px;
+}
+
+.android320 .textocontenedorSiguiente {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.android320 .imagencontenedorSiguiente {
+    margin-top: 20px;
+    left: 30px;
+    font-weight: bold;
+}
+
+
+.android320 .controlojo-360 {
+    height: 40;
+    margin-top: -20px;
+}
+
+
+.android320 .icono-360 {
+    margin: 25px;
+    width: 10%;
+    height: 10%;
+}
+
+.android320 .controlojo-360-L {
+    height: 42;
+    margin-top: -10px;
+    padding-left: 0;
+}
+
+
+.android320 .icono-360 {
+    margin: 25px;
+    width: 10%;
+    height: 10%;
+}
+
+.android320 .icono2-360 {
+    width: 10%;
+    height: 10%;
+    margin-left: 15px;
+}
+
+.android20 .icon-360 {
+    /*margin: 25px;*/
+    width: 26%;
+    height: 26%;
+    margin-bottom: 150px;
+}
+
+.android400 .icono-360 {
+    margin: 25px;
+    width: 150px;
+    height: 150px;
+}
+
+.android400 .icono2-360 {
+    width: 150px;
+    height: 150px;
+    margin-top: 25px;
+}
+
+.android320 .contenedorImagen {
+    width: 100%;
+    height: 200px;
+}
+
+.android400 .contenedorImagen {
+    width: 100%;
+    height: 400px;
+}
+
+.android320 .contenedorWelcome-360 {
+    height: 330px;
+    width: 300px
+}
+
+.android320 .mt-home-box {
+    margin-top: 30px;
+}
+
+.android320 .mb-home-box {
+    margin-bottom: 30px !important;
+}
+
+.android320 .contenedorContenido-360 {
+    height: 250px;
+    width: 280px;
+}
+
+.android320 .contLogo {
+    background-color: #84C5C5;
+    width: 70px;
+    margin-top: 40px;
+    border-radius: 80%;
+    margin-right: 15px;
+}
+
+
+.android320 .foz-360-9 {
+    font-size: 12;
+}
+
+.android320 .foz-360-13 {
+    font-size: 11;
+}
+
+
+.android320 .foz-360-18 {
+    font-size: 11;
+}
+
+.android320 .foz-320-20 {
+    font-size: 20;
+}
+
+.android320 .foz-360-24 {
+    font-size: 12;
+}
+
+
+.android320 .width-360-50 {
+    width: 70%;
+}
+
+.android320 .width-360-60 {
+    width: 60%;
+}
+
+.android320 .width-320-15 {
+    width: 15%;
+}
+
+.android320 .width-320-18 {
+    width: 18%;
+}
+
+.android320 .width-320-80 {
+    width: 80%;
+}
+
+.android320 .width-320-85 {
+    width: 90%;
+}
+
+.android320 .width-320-40 {
+    width: 40%;
+}
+
+.android320 .width-320-10 {
+    width: 10%;
+}
+
+.android320 .w-320-200 {
+    width: 200px;
+}
+
+.android320 .w-360-150 {
+    width: 70px;
+}
+
+.android320 .h-320-300 {
+    height: 300px;
+}
+
+
+.android320 .login-h2 {
+    margin-top: 30px;
+}
+
+.android320 .ingresarLogin {
+    margin-top: 30px !important;
+}
+
+
+.android320 .home-panel {
+    margin-top: 10px !important;
+}
+
+
+.android320 .panel-pass {
+    margin-top: 10px !important;
+}
+
+.android320 .btn-login {
+    padding-top: 0 !important;
+}
+
+
+/*-----------------------------------------------------410 ---------------------*/
+
+
+/*--------------------------------------------------------*/
+
+.android410 .icon-360 {
+    /*margin: 25px;*/
+    width: 26%;
+    height: 26%;
+    margin-bottom: 150px;
+}
+
+.android410 .h1 {
+    font-size: 25px;
+}
+
+.android410 .contenedorNav {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+
+}
+
+.android410 .btn-code {
+    height: 120px;
+    margin-bottom: 45px;
+}
+
+
+.android410 .controlojo-411 {
+    height: 45;
+    margin-top: -25px;
+}
+
+.android410 .controlojo-411-L {
+    height: 42;
+    margin-bottom: 0;
+    margin-top: -50px;
+}
+
+.android410 .logoW40 {
+    width: 40%;
+}
+
+.android410 .contLogo {
+    background-color: #84C5C5;
+    width: 200px;
+    margin: 40px;
+    border-radius: 80%;
+    padding: 25px;
+}
+
+.android410 .contLogo2 {
+    background-color: #84C5C5;
+    width: 200px;
+    height: 150px;
+    margin: 40px;
+    border-radius: 80%;
+    padding: 25px;
+}
+
+.android410 .foz-411-9 {
+    font-size: 9;
+}
+
+.android410 .foz-411-13 {
+    font-size: 15;
+}
+
+.android410 .foz-411-16 {
+    font-size: 16;
+}
+
+.android410 .foz-411-18 {
+    font-size: 16;
+}
+
+.android410 .foz-411-20 {
+    font-size: 20;
+}
+
+.android410 .foz-411-24 {
+    font-size: 24;
+}
+
+
+.android410 .width-411-50 {
+    width: 40%;
+}
+
+.android410 .width-411-60 {
+    width: 60%;
+}
+
+.android410 .width-411-15 {
+    width: 15%;
+}
+
+.android410 .width-411-18 {
+    width: 18%;
+}
+
+.android410 .width-411-80 {
+    width: 80%;
+}
+
+.android410 .width-411-40 {
+    width: 40%;
+}
+
+.android410 .width-411-10 {
+    width: 10%;
+}
+
+.android410 .w-411-200 {
+    width: 200px;
+}
+
+.android410 .w-411-150 {
+    width: 150px;
+}
+
+.android410 .h-411-400 {
+    height: 400px;
+}
+
+.android410 .contenedorWelcome-411 {
+    height: 450px;
+    width: 600px;
+}
+
+.android410 .contenedorSiguiente {
+    background: #45669C;
+    color: white;
+    width: 450px;
+    text-align: center;
+    border-radius: 25%;
+    margin: 80px;
+    margin-bottom: 300px;
+}
+
+.android410 .contenedorSiguienteIn {
+    background: #969FAA;
+    color: black;
+    width: 450px;
+    text-align: center;
+    border-radius: 25%;
+    margin-top: 120px;
+    margin: 80px;
+}
+
+.android410 .textocontenedorSiguiente {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.android410 .imagencontenedorSiguiente {
+    margin-top: 20px;
+    left: 110px;
+    font-weight: bold;
+}
+
+.android410 .contenedorContenido-411 {
+    height: 350px;
+    width: 600px;
+}
+
+.android410 .m15 {
+    margin-top: 15px;
+}
+
+
+.android410 .ContImage {
+    height: 170px;
+}
+
+.android410 .icono-360 {
+    margin: 25px;
+    width: 150px;
+    height: 150px;
+}
+
+.android410 .icono2-360 {
+    width: 150px;
+    height: 150px;
+    margin-top: 25px;
+}
+
+.android410 .title-activity {
+    font-size: 20;
+}
+
+
+/*---------------480------------------------*/
+
+
+/*-----------------------------------------------------410 ---------------------*/
+
+
+/*--------------------------------------------------------*/
+
+
+.android480 .controlojo-411 {
+    height: 45;
+    margin-top: -10px;
+}
+
+.android480 .controlojo-411-L {
+    height: 42;
+    margin-bottom: 0;
+    margin-top: -60px;
+}
+
+.android480 .logoW40 {
+    width: 40%;
+}
+
+.android480 .contLogo {
+    background-color: #84C5C5;
+    width: 200px;
+    margin: 40px;
+    border-radius: 80%;
+    padding: 25px;
+}
+
+.android480 .contLogo2 {
+    background-color: #84C5C5;
+    width: 200px;
+    height: 150px;
+    margin: 40px;
+    border-radius: 80%;
+    padding: 25px;
+}
+
+.android480 .foz-411-9 {
+    font-size: 9;
+}
+
+.android480 .foz-411-13 {
+    font-size: 13;
+}
+
+.android480 .foz-411-16 {
+    font-size: 16;
+}
+
+.android480 .foz-411-18 {
+    font-size: 18;
+}
+
+.android480 .foz-411-20 {
+    font-size: 20;
+}
+
+.android480 .foz-411-24 {
+    font-size: 24;
+}
+
+
+.android480 .width-411-50 {
+    width: 50%;
+}
+
+.android480 .width-411-60 {
+    width: 60%;
+}
+
+.android480 .width-411-15 {
+    width: 15%;
+}
+
+.android480 .width-411-18 {
+    width: 18%;
+}
+
+.android480 .width-411-80 {
+    width: 80%;
+}
+
+.android480 .width-411-40 {
+    width: 40%;
+}
+
+.android480 .width-411-10 {
+    width: 10%;
+}
+
+.android480 .w-411-200 {
+    width: 200px;
+}
+
+.android480 .w-411-150 {
+    width: 150px;
+}
+
+.android480 .h-411-400 {
+    height: 400px;
+}
+
+.android480 .contenedorWelcome-411 {
+    height: 600px;
+    width: 700px;
+}
+
+.android480 .contenedorSiguiente {
+    background: #45669C;
+    color: white;
+    width: 450px;
+    text-align: center;
+    border-radius: 25%;
+    margin: 80px;
+    margin-bottom: 300px;
+}
+
+.android480 .contenedorSiguienteIn {
+    background: #969FAA;
+    color: black;
+    width: 450px;
+    text-align: center;
+    border-radius: 25%;
+    margin-top: 120px;
+    margin: 80px;
+}
+
+.android480 .textocontenedorSiguiente {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.android480 .imagencontenedorSiguiente {
+    margin-top: 20px;
+    left: 110px;
+    font-weight: bold;
+}
+
+.android480 .contenedorContenido-411 {
+    height: 350px;
+    width: 600px;
+}
+
+.android480 .m15 {
+    margin-top: 15px;
+}
+
+
+.android480 .ContImage {
+    height: 170px;
+}
+
+.android480 .icono-360 {
+    margin: 25px;
+    width: 150px;
+    height: 150px;
+}
+
+.android480 .icono2-360 {
+    width: 150px;
+    height: 150px;
+    margin-top: 25px;
+}
+
+.android480 .title-activity {
+    font-size: 20;
+}
+
+
+/*---------------420------------------------*/
+
+
+/*-----------------------------------------------------420 ---------------------*/
+
+
+/*--------------------------------------------------------*/
+
+
+.android420 .controlojo-411 {
+    height: 45;
+    margin-top: 10px;
+}
+
+.android420 .controlojo-411-L {
+    height: 42;
+    margin-bottom: 0;
+    margin-top: -15px;
+}
+
+.android420 .logoW40 {
+    width: 40%;
+}
+
+.android420 .contLogo {
+    background-color: #84C5C5;
+    width: 200px;
+    margin: 40px;
+    border-radius: 80%;
+    padding: 25px;
+}
+
+.android420 .contLogo2 {
+    background-color: #84C5C5;
+    width: 200px;
+    height: 150px;
+    margin: 40px;
+    border-radius: 80%;
+    padding: 25px;
+}
+
+.android420 .foz-411-9 {
+    font-size: 9;
+}
+
+.android420 .foz-411-13 {
+    font-size: 13;
+}
+
+.android420 .foz-411-16 {
+    font-size: 16;
+}
+
+.android420 .foz-411-18 {
+    font-size: 18;
+}
+
+.android420 .foz-411-20 {
+    font-size: 20;
+}
+
+.android420 .foz-411-24 {
+    font-size: 24;
+}
+
+
+.android420 .width-411-50 {
+    width: 50%;
+}
+
+.android420 .width-411-60 {
+    width: 60%;
+}
+
+.android420 .width-411-15 {
+    width: 15%;
+}
+
+.android420 .width-411-18 {
+    width: 18%;
+}
+
+.android420 .width-411-80 {
+    width: 80%;
+}
+
+.android420 .width-411-40 {
+    width: 40%;
+}
+
+.android420 .width-411-10 {
+    width: 10%;
+}
+
+.android420 .w-411-200 {
+    width: 200px;
+}
+
+.android420 .w-411-150 {
+    width: 150px;
+}
+
+.android420 .h-411-400 {
+    height: 400px;
+}
+
+.android420 .contenedorWelcome-411 {
+    height: 600px;
+    width: 700px;
+}
+
+.android420 .contenedorSiguiente {
+    background: #45669C;
+    color: white;
+    width: 450px;
+    text-align: center;
+    border-radius: 25%;
+    margin: 80px;
+    margin-bottom: 300px;
+}
+
+.android420 .contenedorSiguienteIn {
+    background: #969FAA;
+    color: black;
+    width: 450px;
+    text-align: center;
+    border-radius: 25%;
+    margin-top: 120px;
+    margin: 80px;
+}
+
+.android420 .textocontenedorSiguiente {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.android420 .imagencontenedorSiguiente {
+    margin-top: 20px;
+    left: 110px;
+    font-weight: bold;
+}
+
+.android420 .contenedorContenido-411 {
+    height: 350px;
+    width: 600px;
+}
+
+.android420 .m15 {
+    margin-top: 15px;
+}
+
+
+.android420 .ContImage {
+    height: 170px;
+}
+
+.android420 .icono-360 {
+    margin: 25px;
+    width: 150px;
+    height: 150px;
+}
+
+.android420 .icono2-360 {
+    width: 150px;
+    height: 150px;
+    margin-top: 25px;
+}
+
+.android420 .title-activity {
+    font-size: 20;
+}
+
+
+/*-----------------------------------------------------540 ---------------------*/
+
+
+/*--------------------------------------------------------*/
+
+
+.android540 .controlojo-411 {
+    height: 45;
+    margin-top: 10px;
+}
+
+.android540 .controlojo-411-L {
+    height: 42;
+    margin-bottom: 0;
+    margin-top: -15px;
+}
+
+.android540 .logoW40 {
+    width: 40%;
+}
+
+.android540 .contLogo {
+    background-color: #84C5C5;
+    width: 200px;
+    margin: 40px;
+    border-radius: 80%;
+    padding: 25px;
+}
+
+.android540 .contLogo2 {
+    background-color: #84C5C5;
+    width: 200px;
+    height: 150px;
+    margin: 40px;
+    border-radius: 80%;
+    padding: 25px;
+}
+
+.android540 .foz-411-9 {
+    font-size: 9;
+}
+
+.android540 .foz-411-13 {
+    font-size: 13;
+}
+
+.android540 .foz-411-16 {
+    font-size: 16;
+}
+
+.android540 .foz-411-18 {
+    font-size: 18;
+}
+
+.android540 .foz-411-20 {
+    font-size: 20;
+}
+
+.android540 .foz-411-24 {
+    font-size: 24;
+}
+
+
+.android540 .width-411-50 {
+    width: 50%;
+}
+
+.android540 .width-411-60 {
+    width: 60%;
+}
+
+.android540 .width-411-15 {
+    width: 15%;
+}
+
+.android540 .width-411-18 {
+    width: 18%;
+}
+
+.android540 .width-411-80 {
+    width: 80%;
+}
+
+.android540 .width-411-40 {
+    width: 40%;
+}
+
+.android540 .width-411-10 {
+    width: 10%;
+}
+
+.android540 .w-411-200 {
+    width: 200px;
+}
+
+.android540 .w-411-150 {
+    width: 150px;
+}
+
+.android540 .h-411-400 {
+    height: 400px;
+}
+
+.android540 .contenedorWelcome-411 {
+    height: 600px;
+    width: 700px;
+}
+
+.android540 .contenedorSiguiente {
+    background: #45669C;
+    color: white;
+    width: 450px;
+    text-align: center;
+    border-radius: 25%;
+    margin: 80px;
+    margin-bottom: 300px;
+}
+
+.android540 .contenedorSiguienteIn {
+    background: #969FAA;
+    color: black;
+    width: 450px;
+    text-align: center;
+    border-radius: 25%;
+    margin-top: 120px;
+    margin: 80px;
+}
+
+.android540 .textocontenedorSiguiente {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.android540 .imagencontenedorSiguiente {
+    margin-top: 20px;
+    left: 110px;
+    font-weight: bold;
+}
+
+.android540 .contenedorContenido-411 {
+    height: 350px;
+    width: 600px;
+}
+
+.android540 .m15 {
+    margin-top: 15px;
+}
+
+
+.android540 .ContImage {
+    height: 170px;
+}
+
+.android540 .icono-360 {
+    margin: 25px;
+    width: 150px;
+    height: 150px;
+}
+
+.android540 .icono2-360 {
+    width: 150px;
+    height: 150px;
+    margin-top: 25px;
+}
+
+.android540 .title-activity {
+    font-size: 20;
+}
+
+
+/*-----------------------------------------------------600 ---------------------*/
+
+
+/*--------------------------------------------------------*/
+
+
+.android600 .controlojo-411 {
+    height: 45;
+    margin-top: 10px;
+}
+
+.android600 .controlojo-411-L {
+    height: 42;
+    margin-bottom: 0;
+    margin-top: -15px;
+}
+
+.android600 .logoW40 {
+    width: 40%;
+}
+
+.android600 .contLogo {
+    background-color: #84C5C5;
+    width: 200px;
+    margin: 40px;
+    border-radius: 80%;
+    padding: 25px;
+}
+
+.android600 .contLogo2 {
+    background-color: #84C5C5;
+    width: 200px;
+    height: 150px;
+    margin: 40px;
+    border-radius: 80%;
+    padding: 25px;
+}
+
+.android600 .foz-411-9 {
+    font-size: 9;
+}
+
+.android600 .foz-411-13 {
+    font-size: 13;
+}
+
+.android600 .foz-411-16 {
+    font-size: 16;
+}
+
+.android600 .foz-411-18 {
+    font-size: 18;
+}
+
+.android600 .foz-411-20 {
+    font-size: 20;
+}
+
+.android600 .foz-411-24 {
+    font-size: 24;
+}
+
+
+.android600 .width-411-50 {
+    width: 50%;
+}
+
+.android600 .width-411-60 {
+    width: 60%;
+}
+
+.android600 .width-411-15 {
+    width: 15%;
+}
+
+.android600 .width-411-18 {
+    width: 18%;
+}
+
+.android600 .width-411-80 {
+    width: 80%;
+}
+
+.android600 .width-411-40 {
+    width: 40%;
+}
+
+.android600 .width-411-10 {
+    width: 10%;
+}
+
+.android600 .w-411-200 {
+    width: 200px;
+}
+
+.android600 .w-411-150 {
+    width: 150px;
+}
+
+.android600 .h-411-400 {
+    height: 400px;
+}
+
+.android600 .contenedorWelcome-411 {
+    height: 600px;
+    width: 700px;
+}
+
+.android600 .contenedorSiguiente {
+    background: #45669C;
+    color: white;
+    width: 450px;
+    text-align: center;
+    border-radius: 25%;
+    margin: 80px;
+    margin-bottom: 300px;
+}
+
+.android600 .contenedorSiguienteIn {
+    background: #969FAA;
+    color: black;
+    width: 450px;
+    text-align: center;
+    border-radius: 25%;
+    margin-top: 120px;
+    margin: 80px;
+}
+
+.android600 .textocontenedorSiguiente {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.android600 .imagencontenedorSiguiente {
+    margin-top: 20px;
+    left: 110px;
+    font-weight: bold;
+}
+
+.android600 .contenedorContenido-411 {
+    height: 350px;
+    width: 600px;
+}
+
+.android600 .m15 {
+    margin-top: 15px;
+}
+
+
+.android600 .ContImage {
+    height: 170px;
+}
+
+.android600 .icono-360 {
+    margin: 25px;
+    width: 150px;
+    height: 150px;
+}
+
+.android600 .icono2-360 {
+    width: 150px;
+    height: 150px;
+    margin-top: 25px;
+}
+
+.android600 .title-activity {
+    font-size: 20;
+}
+
+
+StackLayout{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* --------------------------- ios --------------------------------*/
+
+.ios .controlojo-360{
+    height: 40;
+    margin-top: -40px;
+}
+.ios .width-411-60{
+    width: 60%;
+}
+.ios .contLogo {
+    position: absolute;
+    background-color: #84C5C5;
+    width: 90px;
+    height: 90px;
+    margin: 20px;
+    border-radius: 80%;
+}
+
+.ios .foz-360-18 {
+    font-size: 14;
+}
+
+.ios .mt-home-box {
+    margin-top: 30px;
+}
+.ios .mb-home-box {
+    margin-bottom: 30px;
+}
+.ios .contenedorNav {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.ios .icon-360 {
+    /*margin: 25px;*/
+    width: 30%;
+    height: 30%;
+    margin-bottom: 150px;
+}
+
+.ios .btn-code {
+    height: 90px;
+    margin-bottom: 35px;
+}
+
+.ios .mt-pass {
+    margin-top: -2px !important;
+}
+
+.ios .controlojo-360-L {
+    height: 42;
+    margin-top: -25px !important;
+}
+
+.ios .texto {
+    /*margin: 110px;*/
+    font-size: 15;
+}
+
+.ios .foz-411-13 {
+    font-size: 13;
+}
+
+.ios .contenedorContenido-360 {
+    height: 280px;
+    width: 450px;
+}
+
+.ios .width-360-50 {
+    width: 40%;
+}
+
+
+.ios .foz-411-16 {
+    font-size: 16;
+}
+
+.ios .height-ios{
+    height: 800px !important;
+}
